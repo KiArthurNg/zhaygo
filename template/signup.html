@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans Tai Le:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaushan Script:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap"
+    />
+  </head>
+  <style>
+    .frame-parent26, .frame-wrapper18, .image-1-group{
+      margin-top: 0;
+    }
+    .frame-wrapper18{
+      padding-top: 0;
+    }
+      .togglePassword{
+      cursor:pointer;
+    }
+    .login2{
+      color: white;
+    }
+    .group-div {
+    font-weight: bold;
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for the hover effect */
+}
+
+button{
+  border: none;
+  outline: none;
+}
+.login2:hover {
+    /* background-color: #f0f0f0; Change background color on hover */
+    color: #333; /* Change text color on hover */
+}
+    #name,#contactNumber,#email,#password,#confirmPassword{
+      width: 100%;
+    }
+    .login-mail-parent{
+    align-self: stretch;
+    height: 56px;
+    margin-top: 30px;
+    position: relative;
+    max-width: 100%;
+    }
+    .image-1-group{
+      width: 100vw;
+    }
+    .signup {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: var(--color-floralwhite);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--padding-35xl) var(--padding-xl) var(--padding-36xl);
+    box-sizing: border-box;
+    line-height: normal;
+    letter-spacing: normal;
+    padding-top: 10px;
+}
+.login-mail-parent1{
+  align-self: stretch;
+    height: 56px;
+    margin-top: 0px;
+    position: relative;
+    max-width: 100%;
+}
+.image-1-group {
+    width: 984px;
+    backdrop-filter: blur(40px);
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-17xl) var(--padding-xl) 65px var(--padding-2xl);
+    gap: 50px;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-gray-100);
+    font-family: var(--font-inter);
+    
+}
+  </style>
+  <body>
+    <div class="signup">
+      <section class="image-1-group">
+        <div class="image-11"></div>
+        <div class="frame-parent22">
+          <div class="frame-wrapper16">
+            <div class="frame-parent23">
+              <div class="new-1-container">
+                <img
+                  class="new-1-icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./images/new-1@2x.png"
+                />
+              </div>
+              <b class="signup-for-new">Create a new account</b>
+            </div>
+          </div>
+          <div class="frame-child10"></div>
+        </div>
+        <div class="frame-wrapper17">
+          <div class="frame-parent24">
+            <div class="frame-parent25">
+              <div class="login-mail-parent1">
+                <div class="login-mail">
+                  <div class="login-mail-child"></div>
+                  <input
+                    class="email-address1"
+                    placeholder="Name"
+                    type="text"
+                    id="name"
+                  />
+                </div>
+                
+              </div>
+              <div class="login-mail-parent">
+                <div class="login-mail">
+                  <div class="login-mail-child"></div>
+                  <input
+                    class="email-address1"
+                    placeholder="Email address"
+                    type="text"
+                    id="email"
+                  />
+                </div>
+                
+              </div>
+              <div class="login-password-parent">
+                <div class="login-password">
+                  <div class="login-password-child"></div>
+                  <input
+                    class="password1"
+                    placeholder="Contact Number"
+                    type="text"
+                    id="contactNumber"
+                  />
+                </div>
+               
+               
+              </div>
+              <div class="login-password-parent">
+                <div class="login-password">
+                  <div class="login-password-child"></div>
+                  <input
+                    class="password1"
+                    placeholder="Password"
+                    type="password"
+                    id="password"
+                  />
+                </div>
+               
+                <img class="frame-child11" id="togglePassword" alt="" src="./images/group-41.svg" />
+              </div>
+              <div class="login-password-parent">
+                <div class="login-password">
+                  <div class="login-password-child"></div>
+                  <input
+                    class="password1"
+                    placeholder="Confirm Password"
+                    type="password"
+                    id="confirmPassword"
+                  />
+                </div>
+                
+                <img class="frame-child11" id="togglePassword1" alt="" src="./images/group-41.svg" />
+              </div>
+            </div>
+            
+            
+            
+          </div>
+        </div>
+        <div class="frame-wrapper18">
+          <div class="frame-parent26">
+            <div class="frame-parent26">
+              <div class="instance-parent2">
+                <button type="submit" class="group-div" id="signup">
+                  <div class="instance-child5"></div>
+                  <div class="login2" style="font-weight: bold;">SIGNUP</div>
+
+                </button>
+              </div>
+            </div>
+            <div class="frame-wrapper19">
+              <div class="frame-parent27">
+                <div class="dont-have-an-account-wrapper">
+                  <div class="dont-have-an">Already have an account?</div>
+                </div>
+                <button class="rectangle-parent5" id="loginButton">
+                  <div class="frame-child12"></div>
+                  <b class="sign-up2">Login</b>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="new-logo-11"></div>
+    </div>
+
+    <script>
+      
+
+      var signupButton = document.getElementById("signup");
+      if (signupButton) {
+  signupButton.addEventListener("click", async function () {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const contactNumber = document.getElementById('contactNumber').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    let hasError = false;
+
+
+    if (hasError) {
+      return;
+    }
+
+    try {
+  const response = await fetch('http://localhost:3000/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name, email, contactNumber, password, confirmPassword }),
+  });
+
+  const data = await response.json();
+
+  if (response.ok) {
+    alert('Sign up successful');
+    console.log(data);
+  } else {
+    alert(`Error: ${data.message}`);
+  }
+} catch (error) {
+  console.error('Error signing up:', error);
+  alert('Internal server error');
+}
+  });
+}
+
+var loginButton = document.getElementById("loginButton");
+if (loginButton) {
+  loginButton.addEventListener("click", function (e) {
+    // Redirect to login page
+    window.location.href = '/'; // Update this with the actual login page URL
+  });
+}
+</script>
+<script>
+      document.getElementById("togglePassword").addEventListener("click", function() {
+    var passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+});
+document.getElementById("togglePassword1").addEventListener("click", function() {
+    var passwordField = document.getElementById("confirmPassword");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+});
+</script>
+  </body>
+</html>

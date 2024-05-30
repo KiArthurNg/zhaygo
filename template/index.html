@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tai+Le:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+New+Tai+Lue:wght@500&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
+<body>
+  <style>
+    .togglePassword{
+      cursor:pointer;
+    }
+    .login2{
+      color: white;
+    }
+    .group-div {
+    font-weight: bold;
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for the hover effect */
+}
+
+button{
+  border: none;
+  outline: none;
+}
+.login2:hover {
+    /* background-color: #f0f0f0; Change background color on hover */
+    color: #333; /* Change text color on hover */
+}
+
+  </style>
+  <div class="login">
+    <section class="image-1-group">
+      <div class="image-11"></div>
+      <div class="frame-parent22">
+        <div class="frame-wrapper16">
+          <div class="frame-parent23">
+            <div class="new-1-container">
+              <img class="new-1-icon1" loading="lazy" alt="" src="./images/new-1@2x.png">
+            </div>
+            <b class="login-to-your">LOGIN TO YOUR ACCOUNT</b>
+          </div>
+        </div>
+        <div class="frame-child10"></div>
+      </div>
+      <div class="frame-wrapper17">
+        <div class="frame-parent24">
+          <form id="loginForm">
+            <div class="login-mail-parent">
+              <div class="login-mail">
+                <div class="login-mail-child"></div>
+                <input class="email-address1" placeholder="Email address" type="text" id="email" name="email">
+              </div>
+              <div class="email-address-is" id="email-error">Email address is empty!</div>
+            </div>
+            <div class="login-password-parent">
+              <div class="login-password">
+                <div class="login-password-child"></div>
+                <input class="password1" placeholder="Password" type="password" id="password" name="password">
+              </div>
+              <img class="frame-child11" id="togglePassword" alt="" src="./images/group-41.svg">
+            </div>
+            <div class="password-is-empty" id="password-error">Password is empty!</div>
+            <div class="frame-wrapper18">
+              <div class="frame-parent26">
+                <div class="instance-parent2">
+                  <button type="submit" class="group-div" id="loginButton">
+                    <div class="instance-child5"></div>
+                    <div class="login2" style="font-weight: bold;">LOGIN</div>
+
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="frame-wrapper19">
+            <div class="frame-parent27">
+              <div class="dont-have-an-account-wrapper">
+                <div class="dont-have-an">Don’t have an account?</div>
+              </div>
+              <button class="rectangle-parent5" id="groupButton">
+                <div class="frame-child12"></div>
+                <b class="sign-up2" id="signup">Sign Up</b>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="new-logo-11"></div>
+  </div>
+
+  <script>
+    document.getElementById("togglePassword").addEventListener("click", function() {
+    var passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+});
+
+    document.getElementById("email-error").style.display = "none";
+    document.getElementById("password-error").style.display = "none";
+
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        let hasError = false;
+
+        // Email and password validation
+        if (!email) {
+            document.getElementById("email-error").style.display = "block";
+            hasError = true;
+        } else {
+            document.getElementById("email-error").style.display = "none";
+        }
+
+        if (!password) {
+            document.getElementById("password-error").style.display = "block";
+            hasError = true;
+        } else {
+            document.getElementById("password-error").style.display = "none";
+        }
+
+        if (hasError) {
+            return;
+        }
+
+        const loginButton = document.getElementById("loginButton");
+        loginButton.disabled = true;
+        loginButton.style.cursor = 'not-allowed';
+
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            console.log(data);
+            if (response.ok) {
+                // Save token to localStorage
+                localStorage.setItem('token', data.token); // Save the token for future requests
+
+                alert('Login successful');
+                // Redirect to home page after successful login
+                window.location.href = '/home';
+            } else {
+                alert(`Error: ${data.message}`);
+            }
+        } catch (error) {
+            console.error('Error logging in:', error);
+            alert('Internal server error');
+        } finally {
+            loginButton.disabled = false;
+            loginButton.style.cursor = 'pointer';
+        }
+    });
+    document.getElementById("signup").addEventListener("click", function() {
+  window.location.href = "/signup";
+});
+
+</script>
+
+
+</script>
+
+
+</body>
+</html>

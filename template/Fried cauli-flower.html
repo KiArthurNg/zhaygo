@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/global1.css" />
+    <link rel="stylesheet" href="./css/payment-page-14.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans Tai Le:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kaushan Script:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="payment-page-14">
+      <main class="lead-developer-wrapper">
+        <a class="lead-developer">Lead developer</a>
+      </main>
+      <header class="content">
+        <div class="content-inner">
+          <div class="frame-parent">
+            <img class="instance-child" alt="" src="./images/group-136.svg" />
+
+            <a class="search">Search</a>
+          </div>
+        </div>
+        <div class="logo-placeholder-parent">
+          <div class="logo-placeholder"></div>
+          <img
+            class="new-logo-1"
+            loading="lazy"
+            alt=""
+            src="./images/new-logo-1@2x.png"
+          />
+
+          <img
+            class="frame-child"
+            loading="lazy"
+            alt=""
+            src="./images/group-134.svg"
+            id="group"
+          />
+        </div>
+        <nav class="feedback">
+          <nav class="feedback-menu">
+            <a class="home" id="homeText">Home</a>
+            <a class="menu" id="menuText">Menu</a>
+            <div class="about">
+              <a class="about-us" id="aboutUsText">About us</a>
+            </div>
+            <a class="feedback1" id="feedbackText">Feedback</a>
+          </nav>
+        </nav>
+        <img
+          class="content-child"
+          loading="lazy"
+          alt=""
+          src="./images/group-551@2x.png"
+          id="groupImage"
+        />
+      </header>
+      <div class="dish">
+        <div class="rectangle-parent">
+          <div class="frame-item"></div>
+          <div class="dish-image-container-wrapper">
+            <div class="dish-image-container">
+              <img
+                class="dish-image-icon"
+                loading="lazy"
+                alt=""
+                src="./images/rectangle-176@2x.png"
+              />
+
+              <div class="dish-details-container">
+                <div class="dish-name-category">
+                  <div class="name-category">
+                    <b class="ema-datsi">Ema Datsi</b>
+                  </div>
+                  <div class="category-veg">Category: Veg</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dish-order">
+            <img
+              class="dish-order-child"
+              alt=""
+              src="./images/rectangle-85.svg"
+            />
+
+            <h2 class="details">Details</h2>
+            <div class="dish-description">
+              <p class="ema-datshi-boasts-container">
+                <span class="ema-datshi-boasts"
+                  >Ema Datshi boasts a bold and robust flavor profile
+                </span>
+                <span class="that-balances-the"
+                  >that balances the intense heat of the dried red chili
+                </span>
+                <span class="peppers-with-the"
+                  >peppers with the creamy richness of the cheese.</span
+                >
+              </p>
+              <div class="price-container">
+                <div class="nu150">Nu.150</div>
+              </div>
+              <div class="total-container">
+                <div class="total-parent">
+                  <b class="total">Total</b>
+                  <div class="total-price">
+                    <div class="nu1501">Nu.150</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-order">
+              <div class="cart-order-buttons">
+                <button class="rectangle-group">
+                  <div class="frame-inner"></div>
+                  <div class="add-to-cart">Add to Cart</div>
+                </button>
+                <button class="rectangle-container" id="groupButton1">
+                  <div class="rectangle-div"></div>
+                  <div class="order-now">Order Now</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="frameContainer" class="popup-overlay" style="display: none">
+      <div class="rectangle-root">
+        <div class="frame-child96"></div>
+        <img class="frame-child97" alt="" src="./images/group-133600.svg" />
+
+        <div class="personal-information" id="popuppersonalInformationText">
+          Personal information
+        </div>
+        <div class="payment-details">Payment details</div>
+        <div class="payment-history" id="popuppaymentHistoryText">
+          Payment history
+        </div>
+        <div class="logout">Logout</div>
+        <div class="frame-child98"></div>
+        <div class="frame-child99"></div>
+        <img class="frame-child100" alt="" src="./images/vector-30.svg" />
+      </div>
+    </div>
+
+    <script>
+      var popuppersonalInformationText = document.getElementById(
+        "popuppersonalInformationText"
+      );
+      if (popuppersonalInformationText) {
+        popuppersonalInformationText.addEventListener("click", function (e) {
+          window.location.href = "./profile.html";
+        });
+      }
+      
+      var popuppaymentHistoryText = document.getElementById(
+        "popuppaymentHistoryText"
+      );
+      if (popuppaymentHistoryText) {
+        popuppaymentHistoryText.addEventListener("click", function (e) {
+          // Please sync "payment history" to the project
+        });
+      }
+      
+      var group = document.getElementById("group");
+      if (group) {
+        group.addEventListener("click", function (e) {
+          // Please sync "cart" to the project
+        });
+      }
+      
+      var homeText = document.getElementById("homeText");
+      if (homeText) {
+        homeText.addEventListener("click", function (e) {
+          // Please sync "ZhayGo home page" to the project
+        });
+      }
+      
+      var menuText = document.getElementById("menuText");
+      if (menuText) {
+        menuText.addEventListener("click", function (e) {
+          // Please sync "Our menu" to the project
+        });
+      }
+      
+      var aboutUsText = document.getElementById("aboutUsText");
+      if (aboutUsText) {
+        aboutUsText.addEventListener("click", function (e) {
+          // Please sync "ZhayGo About us page" to the project
+        });
+      }
+      
+      var feedbackText = document.getElementById("feedbackText");
+      if (feedbackText) {
+        feedbackText.addEventListener("click", function (e) {
+          window.location.href = "./feedback.html";
+        });
+      }
+      
+      var groupImage = document.getElementById("groupImage");
+      if (groupImage) {
+        groupImage.addEventListener("click", function () {
+          var popup = document.getElementById("frameContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var groupButton1 = document.getElementById("groupButton1");
+      if (groupButton1) {
+        groupButton1.addEventListener("click", function (e) {
+          // Please sync "Payment page 01" to the project
+        });
+      }
+      </script>
+  </body>
+</html>

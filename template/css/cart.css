@@ -1,0 +1,67 @@
+.parent-container {
+  margin-left: auto; /* Push to the center */
+  margin-right: auto; /* Push to the center */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  margin-top: 50px;
+
+}
+
+.cart-inner {
+  display: flex; /* Use flexbox */
+  margin-bottom: 20px; /* Adjust margin as needed */
+  padding: 20px;
+  padding-left: 70px; /* Add padding for card-like appearance */
+  background-color: #ffffff; /* Add background color for card-like appearance */
+  border-radius: 8px; /* Add border-radius for card-like appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for card-like appearance */
+  width: 70vw; /* Set width to 90% of viewport width */
+}
+
+.rectangle-group {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-right: 20px; /* Adjust margin between items */
+}
+
+.rectangle-container {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-right: 10px; /* Adjust margin between icon and text */
+}
+
+.ema-datshi {
+  margin-left: 10px; /* Adjust margin between icon and text */
+  color: black; /* Set text color to black */
+}
+
+.frame-container {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-left: auto; /* Push to the right side */
+}
+
+.frame-div {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-left: 10px; /* Adjust margin between icon and text */
+}
+
+.nu-150-wrapper {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  margin-right: 5px; /* Adjust margin between icon and text */
+}
+
+.nu-150 {
+  margin-right: 5px; /* Adjust margin between icon and text */
+  color: black; /* Set text color to black */
+}
+
+/* Adjust image size */
+.rectangle-icon,
+.group-icon {
+  width: 180px; /* Adjust width to be three times bigger */
+  height: 180px; /* Adjust height to be three times bigger */
+}

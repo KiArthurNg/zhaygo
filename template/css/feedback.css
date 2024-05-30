@@ -1,0 +1,99 @@
+
+  
+  .root {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  /* Feedback Section */
+  .image-1-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .got-some-feedback {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #4A90E2;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-input, .subject-input, .message-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .feedback-name, .feedback-sub, .feedback-message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .name, .subject, .message {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .name-field, .subject-area-wrapper, .feedback-message-inner {
+    display: flex;
+    align-items: center;
+  }
+  
+  .name-field-child, .subject-area, .frame-child {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .name-field-child {
+    height: 30px;
+  }
+  
+  .subject-area {
+    height: 30px;
+  }
+  
+  .frame-child {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  textarea::placeholder {
+    color: #999;
+  }
+  
+  /* Button Styles */
+  .submit-button {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+  }
+  
+  .submit-button:hover {
+    background-color: #357ABD;
+  }
+  
