@@ -23,8 +23,15 @@
       href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap"
     />
     <link rel="stylesheet" href="./css/profilepic.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <script src="./js/profile.js"></script>
   </head>
+  <style>
+    .order22{
+      cursor: pointer;
+      pointer-events: none;
+    }
+  </style>
   <body>
     <div class="village-restaurant2">
       
@@ -73,6 +80,11 @@
               alt=""
               src="./images/images.png"
             />
+            <div id="dropdown-menu" class="dropdown-menu">
+              <a href="/profile">Profile</a>
+              <a href="/payment">Payment History</a>
+              <a href="/logout" id="logout">Logout</a>
+          </div>
           </div>
         </div>
       </header>
@@ -201,7 +213,7 @@
                   <div class="hoentay">Sausage</div>
                 </div>
                 <div class="rectangle-parent41">
-                  <div class="instance-child14"></div>
+                  <div class="instance-child14" id="child"></div>
                   <div class="order22">Order</div>
                 </div>
               </div>
@@ -485,7 +497,7 @@
       var feedbackText1 = document.getElementById("feedbackText1");
       if (feedbackText1) {
         feedbackText1.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = '/feedback'
         });
       }
       
@@ -534,7 +546,7 @@
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+         window.location.href = "/feedback"
         });
       }
       
@@ -552,8 +564,9 @@
         });
       }
       
-      document.getElementById("profile-image").addEventListener("click", function() {
-  window.location.href = "/profile";
+  
+document.getElementById("child").addEventListener("click", function() {
+  window.location.href = "/sausage";
 });
 
       
@@ -565,5 +578,6 @@
       }
       </script>
       <script src="./js/heartsign.js"></script>
+      <script src="js/dropdown.js"></script>
   </body>
 </html>

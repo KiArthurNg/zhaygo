@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="./css/global1.css" />
     <link rel="stylesheet" href="./css/payment-page-14.css" />
+   
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -69,17 +70,17 @@
           </nav>
         </nav>
         <img
-          class="content-child"
-          loading="lazy"
-          alt=""
-          src="./images/images.png"
-          id="profile-image"
-        />
-        <div id="dropdown-menu" class="dropdown-menu">
-          <a href="/profile">Profile</a>
-          <a href="/payment">Payment History</a>
-          <a href="/logout" id="logout">Logout</a>
-      </div>
+        class="frame-child15"
+        loading="lazy"
+        id="profile-image"
+        alt=""
+        src="./images/images.png"
+      />
+      <div id="dropdown-menu" class="dropdown-menu">
+        <a href="/profile">Profile</a>
+        <a href="/payment">Payment History</a>
+        <a href="/logout" id="logout">Logout</a>
+    </div>
       </header>
       <div class="dish">
         <div class="rectangle-parent">
@@ -90,13 +91,14 @@
                 class="dish-image-icon"
                 loading="lazy"
                 alt=""
-                src="./images/rectangle-176@2x.png"
+                id="dishImage"
+                src="./images/rectangle-1262@2x.png"
               />
 
               <div class="dish-details-container">
                 <div class="dish-name-category">
                   <div class="name-category">
-                    <b class="ema-datsi">Ema Datsi</b>
+                    <b class="ema-datsi" id="dishName">Bibimbap</b>
                   </div>
                   <div class="category-veg">Category: Veg</div>
                 </div>
@@ -114,7 +116,7 @@
             <div class="dish-description">
               <p class="ema-datshi-boasts-container">
                 <span class="ema-datshi-boasts"
-                  >Ema Datshi boasts a bold and robust flavor profile
+                  >Bibimbap boasts a bold and robust flavor profile
                 </span>
                 <span class="that-balances-the"
                   >that balances the intense heat of the dried red chili
@@ -172,7 +174,7 @@
     </div>
 
     <script>
-     var popuppersonalInformationText = document.getElementById(
+    var popuppersonalInformationText = document.getElementById(
         "popuppersonalInformationText"
       );
       if (popuppersonalInformationText) {
@@ -258,7 +260,8 @@
         });
       }
       </script>
-      <script src="js/profile.js"></script>
-      <script src="js/dropdown.js"></script>
   </body>
+  <script src="./js/order.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/dropdown.js"></script>
 </html>

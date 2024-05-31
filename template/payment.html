@@ -29,6 +29,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
     />
+    <link rel="stylesheet" href="css/profilepic.css">
+    <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <style>
     .payment-page-02 {
@@ -123,9 +125,14 @@
           class="frame-inner"
           loading="lazy"
           alt=""
-          src="./images/group-55@2x.png"
-          id="groupImage"
+          id="profile-image"
+          src="./images/images.png"
         />
+        <div id="dropdown-menu" class="dropdown-menu">
+          <a href="/profile">Profile</a>
+          <a href="/payment">Payment History</a>
+          <a href="/logout" id="logout">Logout</a>
+      </div>
       </header>
       <div class="title">Payment History</div>
       <table>
@@ -158,42 +165,42 @@
       );
       if (popuppaymentHistoryText) {
         popuppaymentHistoryText.addEventListener("click", function (e) {
-          // Please sync "payment history" to the project
+          window.location.href = '/payment'
         });
       }
       
       var group = document.getElementById("group");
       if (group) {
         group.addEventListener("click", function (e) {
-          // Please sync "cart" to the project
+          window.location.href = '/cart'
         });
       }
       
       var homeText = document.getElementById("homeText");
       if (homeText) {
         homeText.addEventListener("click", function (e) {
-          // Please sync "ZhayGo home page" to the project
+          window.location.href = '/home'
         });
       }
       
       var menuText = document.getElementById("menuText");
       if (menuText) {
         menuText.addEventListener("click", function (e) {
-          // Please sync "Our menu" to the project
+          window.location.href = '/menu'
         });
       }
       
       var aboutUsText = document.getElementById("aboutUsText");
       if (aboutUsText) {
         aboutUsText.addEventListener("click", function (e) {
-          // Please sync "ZhayGo About us page" to the project
+          window.location.href = '/home'
         });
       }
       
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          window.location.href = "./feedback.html";
+          window.location.href = "./feedback";
         });
       }
       
@@ -294,5 +301,7 @@
       </script>
      
       </script>
+      <script src="js/dropdown.js"></script>
+      <script src="js/profile.js"></script>
   </body>
 </html>

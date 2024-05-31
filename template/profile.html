@@ -239,9 +239,7 @@
     <script src="./js/profile.js"></script>
     <script>
       // Event listener to navigate to the profile page
-      document.getElementById("profile-image").addEventListener("click", function() {
-          window.location.href = "/profile";
-      });
+  
 
       // Event listener to navigate to the about us page
       document.getElementById("homeText1").addEventListener("click", function() {
@@ -260,7 +258,7 @@
 
       // Placeholder event listener for feedback functionality
       document.getElementById("feedbackText").addEventListener("click", function() {
-          // Implement feedback functionality
+        window.location.href="/feedback"
       });
 
       // Placeholder event listener for coupon page functionality
@@ -288,7 +286,7 @@
 
       // Placeholder event listener for feedback functionality
       document.getElementById("feedbackText1").addEventListener("click", function() {
-          // Implement feedback functionality
+        window.location.href = '/feedback'
       });
 
       // Event listener to navigate to the cart page
@@ -376,5 +374,6 @@ document.getElementById("reset-button").addEventListener("click", function() {
         });
     });
 </script>
+<script src="js/dropdown.js"></script>
 </body>
 </html>

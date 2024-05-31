@@ -27,6 +27,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
     />
+    <link rel="stylesheet" href="css/profilepic.css">
+    <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <body>
     <div class="payment-page-14">
@@ -72,10 +74,15 @@
           class="content-child"
           loading="lazy"
           alt=""
-          id="groupImage"
-          src="./images/group-551@2x.png"
+          id="profile-image"
+          src="./images/images.png"
           
         />
+        <div id="dropdown-menu" class="dropdown-menu">
+          <a href="/profile">Profile</a>
+          <a href="/payment">Payment History</a>
+          <a href="/logout" id="logout">Logout</a>
+      </div>
       </header>
       <div class="dish">
         <div class="rectangle-parent">
@@ -169,7 +176,7 @@
     </div>
 
     <script>
-      var popuppersonalInformationText = document.getElementById(
+     var popuppersonalInformationText = document.getElementById(
         "popuppersonalInformationText"
       );
       if (popuppersonalInformationText) {
@@ -183,42 +190,42 @@
       );
       if (popuppaymentHistoryText) {
         popuppaymentHistoryText.addEventListener("click", function (e) {
-          // Please sync "payment history" to the project
+          window.location.href = "/payment";
         });
       }
       
       var group = document.getElementById("group");
       if (group) {
         group.addEventListener("click", function (e) {
-          // Please sync "cart" to the project
+          window.location.href = "/cart";
         });
       }
       
       var homeText = document.getElementById("homeText");
       if (homeText) {
         homeText.addEventListener("click", function (e) {
-          // Please sync "ZhayGo home page" to the project
+          window.location.href = "/home";
         });
       }
       
       var menuText = document.getElementById("menuText");
       if (menuText) {
         menuText.addEventListener("click", function (e) {
-          // Please sync "Our menu" to the project
+          window.location.href = "/menu";
         });
       }
       
       var aboutUsText = document.getElementById("aboutUsText");
       if (aboutUsText) {
         aboutUsText.addEventListener("click", function (e) {
-          // Please sync "ZhayGo About us page" to the project
+          window.location.href = "/aboutus";
         });
       }
       
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          window.location.href = "./feedback.html";
+          window.location.href = "./feedback";
         });
       }
       
@@ -251,10 +258,12 @@
       var groupButton1 = document.getElementById("groupButton1");
       if (groupButton1) {
         groupButton1.addEventListener("click", function (e) {
-          // Please sync "Payment page 01" to the project
+          window.location.href = "/payment";
         });
       }
       </script>
   </body>
   <script src="./js/order.js"></script>
+  <script src="./js/profile.js"></script>
+  <script src="js/dropdown.js"></script>
 </html>

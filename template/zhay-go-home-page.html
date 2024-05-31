@@ -6,11 +6,12 @@
 
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/zhay-go-home-page.css" />
-    <script src="./js/profile.js"></script>
+   
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     />
+    <script src="./js/profile.js"></script>
     <link rel="stylesheet" href="./css/profilepic.css">
     <link
       rel="stylesheet"
@@ -24,8 +25,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap"
     />
+    <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <style>
+   
   </style>
   <body>
     <div class="zhaygo-home-page">
@@ -80,6 +83,11 @@
             alt=""
             src="./images/images.png"
           />
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="/profile">Profile</a>
+            <a href="/payment">Payment History</a>
+            <a href="/logout" id="logout">Logout</a>
+        </div>
         </header>
         <div class="component-3-parent">
           <div class="component-3">
@@ -589,16 +597,18 @@
         });
       }
 
-      document.getElementById("profile-image").addEventListener("click", function() {
-  window.location.href = "/profile";
-});
+//       document.getElementById("profile-image").addEventListener("click", function() {
+//   window.location.href = "/profile";
+// });
+
+
 
       
       
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = '/feedback'
         });
       }
       
@@ -636,7 +646,7 @@
       var feedbackText1 = document.getElementById("feedbackText1");
       if (feedbackText1) {
         feedbackText1.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = '/feedback'
         });
       }
       
@@ -648,6 +658,6 @@
       }
 
       </script>
-     
+<script src="js/dropdown.js"></script>
   </body>
 </html>

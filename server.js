@@ -298,7 +298,27 @@ app.get('/profile', (req, res) => {
 app.get('/order', (req, res) => {
     res.sendFile(path.join(__dirname, 'template/order.html'));
 });
-
+app.get('/cali', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/cali.html'));
+});
+app.get('/shakam', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/shakam.html'));
+});
+app.get('/chicken', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/backyard.html'));
+});
+app.get('/noodles', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/noodles.html'));
+});
+app.get('/Bibimbap', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/bibimbap.html'));
+});
+app.get('/sausage', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/sausage.html'));
+});
+app.get('/feedback', (req, res) => {
+    res.sendFile(path.join(__dirname, 'template/feedback.html'));
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

@@ -4,15 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/zhay-go-home-page.css" />
-    <script src="./js/profile.js"></script>
-    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="./css/global2.css" />
+    <link rel="stylesheet" href="./css/feedback.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     />
-    <link rel="stylesheet" href="./css/profilepic.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans Tai Le:wght@400&display=swap"
@@ -25,67 +22,90 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/profilepic.css">
+    <link rel="stylesheet" href="css/dropdown.css">
   </head>
+  <style>
+    input{
+      border: none;
+      outline: none;
+    }
+  </style>
   <body>
-    <div class="zhaygo-home-page">
-      <div class="frame-parent28">
-        <header class="frame-header">
-          <div class="instance-frame">
-            <div class="frame-parent29">
-              <img
-                class="instance-child6"
-                alt=""
-                src="./images/group-136.svg"
-              />
+    <div class="feedback">
+      <div class="new-logo-1"></div>
+      <img class="new-logo-2" alt="" src="./images/new-logo-1@2x.png" />
 
-              <div class="search1">Search</div>
+      <section class="structure">
+        <header class="structure1">
+          <div class="structure2">
+            <div class="frame-parent">
+              <img class="instance-child" alt="" src="./images/group-136.svg" />
+
+              <a class="search">Search</a>
             </div>
           </div>
-          <div class="rectangle-parent6">
-            <div class="frame-child13"></div>
+          <div class="content">
+            <div class="background"></div>
             <img
-              class="new-logo-12"
+              class="new-logo-11"
               loading="lazy"
               alt=""
-              src="./images/new-logo-2@2x.png"
+              src="./images/new-logo-1@2x.png"
             />
 
             <img
-              class="frame-child14"
+              class="content-child"
               loading="lazy"
               alt=""
               src="./images/group-134.svg"
               id="group"
             />
           </div>
-          <nav class="frame-nav">
-            <nav class="home-group">
-              <h3 class="home2" id="homeText1">Home</h3>
-              <h3 class="menu3" id="menuText1">Menu</h3>
+          <nav class="navigation">
+            <nav class="home-menu-feedback">
+              <a class="home" id="homeText1">Home</a>
+              <a class="menu" id="menuText1">Menu</a>
               <div class="about-us-container">
-                <h3 class="about-us2" id="aboutUsText">About us</h3>
+                <a class="about-us" id="aboutUsText">About us</a>
               </div>
-              <h3 class="feedback2" id="feedbackText">Feedback</h3>
+              <a class="feedback1" id="feedbackText">Feedback</a>
             </nav>
           </nav>
           <img
-            class="frame-child15"
+            class="structure-child"
             loading="lazy"
-            id="profile-image"
             alt=""
-            src="./images/images.png"
+            id="profile-image"
+          src="./images/images.png"
           />
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="/profile">Profile</a>
+            <a href="/payment">Payment History</a>
+            <a href="/logout" id="logout">Logout</a>
+        </div>
         </header>
-        <div class="root">
-            <section class="image-1-parent">
-              <div class="image-1"></div>
-              <div class="got-some-feedback-lay-it-on-m-parent">
-                <div class="got-some-feedback">Got some feedback? Lay it on me!</div>
-                <div class="feedback-input">
+        <div class="main">
+          <div class="image-1-parent">
+            <div class="image-1"></div>
+            <div class="form">
+              <div class="input-fields">
+                <b class="got-some-feedback"
+                  >Got some feedback? Lay it on us!</b
+                >
+                <div class="name-input">
                   <div class="feedback-name">
                     <div class="name">Name</div>
-                    <div class="name-field">
-                      <div class="name-field-child"></div>
+                    <div class="name-input-background">
+                      <input class="name-input-border">
                     </div>
                   </div>
                 </div>
@@ -93,139 +113,148 @@
               <div class="subject-input">
                 <div class="feedback-sub">
                   <div class="subject">Subject</div>
-                  <div class="subject-area-wrapper">
-                    <div class="subject-area"></div>
+                  <div class="subject-input-background">
+                    <input class="subject-input-border">
                   </div>
                 </div>
               </div>
               <div class="message-input">
                 <div class="feedback-message">
                   <div class="message">Feedback</div>
-                  <div class="feedback-message-inner">
-                    <textarea class="frame-child" rows="{7}" cols="{25}"> </textarea>
+                  <div class="message-input-background">
+                    <textarea
+                      class="message-input-border"
+                      rows="{7}"
+                      cols="{25}"
+                    >
+                    </textarea>
                   </div>
                 </div>
               </div>
-            </section>
-          </div>
-      <footer class="footer1">
-        <div class="footer-item" data-scroll-to="rectangle"></div>
-        <div class="frame-parent37">
-          <div class="opening-hours-group">
-            <div class="opening-hours1">Opening Hours</div>
-            <div class="monday-thursday-container1">
-              <p class="monday-thursday1">Monday - Thursday</p>
-              <p class="am-4001">9:00 Am - 4:00 Pm</p>
+            </div>
+            <div class="submit-button-container">
+              <button class="submit-button-background-parent">
+                <div class="submit-button-background"></div>
+                <div class="submit">Submit</div>
+              </button>
             </div>
           </div>
-          <div class="friday-sunday-container1">
-            <p class="friday-sunday1">Friday - Sunday</p>
-            <p class="am-5001">11:00 Am - 5:00 Pm</p>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="footer-child"></div>
+        <div class="footer-content">
+          <div class="opening-hours-container">
+            <b class="opening-hours">Opening Hours</b>
+            <div class="monday-thursday-container">
+              <p class="monday-thursday">Monday - Thursday</p>
+              <p class="am-400">9:00 Am - 4:00 Pm</p>
+            </div>
+          </div>
+          <div class="friday-sunday-container">
+            <p class="friday-sunday">Friday - Sunday</p>
+            <p class="am-500">11:00 Am - 5:00 Pm</p>
           </div>
         </div>
-        <div class="frame-parent38">
-          <div class="frame-parent39">
-            <div class="frame-wrapper28">
-              <div class="frame-parent40">
-                <div class="menu-contact-wrapper">
-                  <div class="menu-contact">
-                    <div class="contact-us1">Contact us</div>
-                    <div class="menu4">Menu</div>
+        <div class="contact-info">
+          <div class="contact-menu">
+            <div class="contact-navigation">
+              <div class="contact-us-menu-parent">
+                <div class="contact-us-menu">
+                  <div class="contact-us-menu-label">
+                    <b class="contact-us">Contact us</b>
+                    <b class="menu1">Menu</b>
                   </div>
                 </div>
-                <div class="frame-parent41">
-                  <div class="frame-wrapper29">
-                    <div class="image-removebg-preview-7-2-group">
+                <div class="home-link-parent">
+                  <div class="home-link">
+                    <div class="home-label-container">
                       <img
-                        class="image-removebg-preview-7-21"
+                        class="image-removebg-preview-7-2"
                         loading="lazy"
                         alt=""
                         src="./images/imageremovebgpreview-7-2@2x.png"
                       />
 
-                      <div class="wrapper1">
-                        <div class="div3">17656789</div>
+                      <div class="home-label">
+                        <u class="u">17656789</u>
                       </div>
-                      <div class="home-container">
-                        <div class="home3" id="homeText">Home</div>
+                      <div class="home-label1">
+                        <u class="home1" id="homeText">Home</u>
                       </div>
                     </div>
                   </div>
-                  <div class="frame-parent42">
-                    <div class="frame-wrapper30">
-                      <div class="frame-parent43">
-                        <div class="image-removebg-preview-8-2-group">
+                  <div class="email-link-parent">
+                    <div class="email-link">
+                      <div class="email-container">
+                        <div class="email-address-container">
                           <img
-                            class="image-removebg-preview-8-21"
+                            class="image-removebg-preview-8-2"
                             loading="lazy"
                             alt=""
                             src="./images/imageremovebgpreview-8-2@2x.png"
                           />
 
-                          <div class="zheygogmailcom-container">
-                            <div class="zheygogmailcom1">zheygo@gmail.com</div>
+                          <div class="email-label">
+                            <u class="zheygogmailcom">zheygo@gmail.com</u>
                           </div>
                         </div>
-                        <div class="frame-wrapper31">
-                          <div class="image-removebg-preview-5-1-group">
+                        <div class="location-container-wrapper">
+                          <div class="location-container">
                             <img
-                              class="image-removebg-preview-5-11"
+                              class="image-removebg-preview-5-1"
                               loading="lazy"
                               alt=""
                               src="./images/imageremovebgpreview-5-1@2x.png"
                             />
 
-                            <div class="kabesa-thimphu1">Kabesa, Thimphu</div>
+                            <u class="kabesa-thimphu">Kabesa, Thimphu</u>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="frame-parent44">
-                      <div class="frame-wrapper32">
-                        <div class="menu-group">
-                          <div class="menu5" id="menuText2">Menu</div>
-                          <div class="about-us3" id="aboutUsText1">
-                            About us
-                          </div>
+                    <div class="about-us-menu-parent">
+                      <div class="about-us-menu">
+                        <div class="about-us-menu-label">
+                          <u class="menu2" id="menuText2">Menu</u>
+                          <u class="about-us1" id="aboutUsText1">About us</u>
                         </div>
                       </div>
-                      <div class="feedback3" id="feedbackText1">Feedback</div>
-                      <div class="cart2" id="cartText">Cart</div>
+                      <u class="feedback2" id="feedbackText1">Feedback</u>
+                      <u class="cart" id="cartText">Cart</u>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="frame-parent45">
-              <div class="c-group">
-                <div class="c1">c</div>
-                <div class="frame-child34"></div>
+            <div class="copyright">
+              <div class="copyright-content">
+                <div class="c">c</div>
+                <div class="copyright-content-child"></div>
               </div>
-              <div class="zheygo-2024-all-rights-reserv-container">
-                <div class="zheygo-2024-all1">
-                  Zheygo 2024. All Rights Reserved.
-                </div>
+              <div class="rights-statement">
+                <p class="zheygo-2024-all">Zheygo 2024. All Rights Reserved.</p>
               </div>
             </div>
           </div>
-          <div class="frame-parent46">
-            <div class="wrapper2">
-              <h2 class="h22">“</h2>
+          <div class="quote-container">
+            <div class="opening-quote">
+              <h3 class="h3">“</h3>
             </div>
-            <div class="frame-parent47">
-              <div class="new-logo-2-container">
+            <div class="quote-content">
+              <div class="quote-image-container">
                 <img
-                  class="new-logo-22"
+                  class="new-logo-21"
                   loading="lazy"
                   alt=""
-                  src="./images/new-logo-2-1@2x.png"
+                  src="./images/new-logo-2@2x.png"
                 />
               </div>
-              <div class="frame-parent48">
-                <div class="wrapper3">
-                  <h2 class="h23">”</h2>
+              <div class="closing-quote-parent">
+                <div class="closing-quote">
+                  <h3 class="h31">”</h3>
                 </div>
-                <div class="delight-your-taste1">
+                <div class="delight-your-taste">
                   Delight your taste with diverse taste
                 </div>
               </div>
@@ -235,7 +264,44 @@
       </footer>
     </div>
 
+    <div id="frameContainer" class="popup-overlay" style="display: none">
+      <div class="rectangle-root">
+        <div class="frame-child93"></div>
+        <img class="frame-child94" alt="" src="./images/group-133600.svg" />
+
+        <div class="personal-information" id="popuppersonalInformationText">
+          Personal information
+        </div>
+        <div class="payment-details">Payment details</div>
+        <div class="payment-history" id="popuppaymentHistoryText">
+          Payment history
+        </div>
+        <div class="logout">Logout</div>
+        <div class="frame-child95"></div>
+        <div class="frame-child96"></div>
+        <img class="frame-child97" alt="" src="./images/vector-30.svg" />
+      </div>
+    </div>
+
     <script>
+      var popuppersonalInformationText = document.getElementById(
+        "popuppersonalInformationText"
+      );
+      if (popuppersonalInformationText) {
+        popuppersonalInformationText.addEventListener("click", function (e) {
+          window.location.href = "./profile.html";
+        });
+      }
+      
+      var popuppaymentHistoryText = document.getElementById(
+        "popuppaymentHistoryText"
+      );
+      if (popuppaymentHistoryText) {
+        popuppaymentHistoryText.addEventListener("click", function (e) {
+          window.location.href = "/payment";
+        });
+      }
+      
       var group = document.getElementById("group");
       if (group) {
         group.addEventListener("click", function (e) {
@@ -246,7 +312,7 @@
       var homeText1 = document.getElementById("homeText1");
       if (homeText1) {
         homeText1.addEventListener("click", function (e) {
-          window.location.href = "/aboutus";
+          window.location.href = "/home";
         });
       }
       
@@ -263,34 +329,44 @@
           window.location.href = "/aboutus";
         });
       }
-
-      document.getElementById("profile-image").addEventListener("click", function() {
-  window.location.href = "/profile";
-});
-
-      
       
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = "feedback.html";
         });
       }
       
-      var groupContainer = document.getElementById("groupContainer");
-      if (groupContainer) {
-        groupContainer.addEventListener("click", function (e) {
-          // Please sync "coupon page" to the project
+      var groupImage = document.getElementById("groupImage");
+      if (groupImage) {
+        groupImage.addEventListener("click", function () {
+          var popup = document.getElementById("frameContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
         });
       }
       
       var homeText = document.getElementById("homeText");
       if (homeText) {
-        homeText.addEventListener("click", function () {
-          var anchor = document.querySelector("[data-scroll-to='rectangle']");
-          if (anchor) {
-            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-          }
+        homeText.addEventListener("click", function (e) {
+          window.location.href = "/home";
         });
       }
       
@@ -304,14 +380,14 @@
       var aboutUsText1 = document.getElementById("aboutUsText1");
       if (aboutUsText1) {
         aboutUsText1.addEventListener("click", function (e) {
-          window.location.href = "/cart";
+          window.location.href = "/aboutus";
         });
       }
       
       var feedbackText1 = document.getElementById("feedbackText1");
       if (feedbackText1) {
         feedbackText1.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = "feedback.html";
         });
       }
       
@@ -321,8 +397,8 @@
           window.location.href = "/cart";
         });
       }
-
       </script>
-     
+      <script src="js/dropdown.js"></script>
+      <script src="js/profile.js"></script>
   </body>
 </html>

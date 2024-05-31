@@ -24,9 +24,13 @@
     />
     <link rel="stylesheet" href="./css/profilepic.css">
     <script src="./js/profile.js"></script>
+    <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <style>
-
+.order33,.order34,.order35{
+  cursor: pointer;
+      pointer-events: none;
+}
   </style>
   <body>
     <div class="mountain-cafe2">
@@ -79,13 +83,11 @@
             alt=""
             src="./images/images.png"
               />
-                <img
-        class="frame-inner"
-        id="profile-image"
-        loading="lazy"
-        alt=""
-        src="./images/group-55@2x.png"
-      />
+              <div id="dropdown-menu" class="dropdown-menu">
+                <a href="/profile">Profile</a>
+                <a href="/payment">Payment History</a>
+                <a href="/logout" id="logout">Logout</a>
+            </div>
             </div>
           </div>
         </header>
@@ -154,9 +156,7 @@
         />
 
         <div class="frame-child136"></div>
-        <div class="wrapper-rectangle-213">
-          <img class="wrapper-rectangle-213-child" alt="" />
-        </div>
+        
       </section>
       <div class="embark-on-a-culinary-adventure-wrapper">
         <h3 class="embark-on-a-container">
@@ -211,8 +211,8 @@
                 </div>
                 <div class="instance-wrapper31">
                   <div class="rectangle-parent64">
-                    <div class="instance-child20"></div>
-                    <div class="order33">Order</div>
+                    <div class="instance-child20" id="instance-child20"></div>
+                    <div class="order33" id="instance-child20">Order</div>
                   </div>
                 </div>
               </div>
@@ -241,7 +241,7 @@
                       <div class="veg-fried-noodles">Veg-Fried noodles</div>
                     </div>
                     <div class="rectangle-parent66">
-                      <div class="instance-child21"></div>
+                      <div class="instance-child21" id="instance-child21"></div>
                       <div class="order34">Order</div>
                     </div>
                   </div>
@@ -269,7 +269,7 @@
                   <div class="bibimbap1">Bibimbap</div>
                 </div>
                 <div class="rectangle-parent68">
-                  <div class="instance-child22"></div>
+                  <div class="instance-child22" id="child1"></div>
                   <div class="order35">Order</div>
                 </div>
               </div>
@@ -686,7 +686,7 @@
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = '/feedback'
         });
       }
       
@@ -707,7 +707,7 @@
       var feedbackText1 = document.getElementById("feedbackText1");
       if (feedbackText1) {
         feedbackText1.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = '/feedback'
         });
       }
       
@@ -717,11 +717,18 @@
           window.location.href = "/cart";
         });
       }
-      document.getElementById("profile-image").addEventListener("click", function() {
-  window.location.href = "/profile";
-});
 
+document.getElementById("instance-child20").addEventListener("click", function() {
+  window.location.href = "/chicken";
+});
+document.getElementById("instance-child21").addEventListener("click", function() {
+  window.location.href = "/noodles";
+});
+document.getElementById("child1").addEventListener("click", function() {
+  window.location.href = "/bibimbap";
+});
       </script>
       <script src="./js/heartsign.js"></script>
+      <script src="js/dropdown.js"></script>
   </body>
 </html>

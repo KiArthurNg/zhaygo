@@ -6,6 +6,10 @@
 
     <link rel="stylesheet" href="./css/global1.css" />
     <link rel="stylesheet" href="./css/payment-page-14.css" />
+    <link rel="stylesheet" href="./css/profilepic.css">
+    <link rel="stylesheet" href="./css/profilepic.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+   
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -26,7 +30,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
     />
-    <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <body>
     <div class="payment-page-14">
@@ -72,8 +75,9 @@
           class="content-child"
           loading="lazy"
           alt=""
-          src="./images/images.png"
           id="profile-image"
+          src="./images/images.png"
+          
         />
         <div id="dropdown-menu" class="dropdown-menu">
           <a href="/profile">Profile</a>
@@ -90,15 +94,16 @@
                 class="dish-image-icon"
                 loading="lazy"
                 alt=""
-                src="./images/rectangle-176@2x.png"
+                id="dishImage"
+                src="./images/rectangle-157@2x.png"
               />
 
               <div class="dish-details-container">
                 <div class="dish-name-category">
                   <div class="name-category">
-                    <b class="ema-datsi">Ema Datsi</b>
+                    <b class="ema-datsi" id="dishName">Shakam Pha</b>
                   </div>
-                  <div class="category-veg">Category: Veg</div>
+                  <div class="category-veg">Category: Non Veg</div>
                 </div>
               </div>
             </div>
@@ -114,7 +119,7 @@
             <div class="dish-description">
               <p class="ema-datshi-boasts-container">
                 <span class="ema-datshi-boasts"
-                  >Ema Datshi boasts a bold and robust flavor profile
+                  >Potato boasts a bold and robust flavor profile
                 </span>
                 <span class="that-balances-the"
                   >that balances the intense heat of the dried red chili
@@ -258,7 +263,8 @@
         });
       }
       </script>
-      <script src="js/profile.js"></script>
-      <script src="js/dropdown.js"></script>
   </body>
+  <script src="./js/order.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/dropdown.js"></script>
 </html>

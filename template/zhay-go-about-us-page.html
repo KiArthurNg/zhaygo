@@ -25,6 +25,7 @@
     />
     <link rel="stylesheet" href="./css/profilepic.css">
     <script src="./js/profile.js"></script>
+    <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <style>
     .menu6 {
@@ -95,7 +96,11 @@
           id="profile-image"
           alt=""
           src="./images/images.png"
-        />
+        />        <div id="dropdown-menu" class="dropdown-menu">
+          <a href="/profile">Profile</a>
+          <a href="/payment">Payment History</a>
+          <a href="/logout" id="logout">Logout</a>
+      </div>
       </header>
       <div class="about-us-wrapper2">
         <h1 class="about-us13">
@@ -525,7 +530,7 @@
       var feedbackText = document.getElementById("feedbackText");
       if (feedbackText) {
         feedbackText.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+          window.location.href = '/feedback'
         });
       }
       
@@ -553,7 +558,7 @@
       var feedbackText1 = document.getElementById("feedbackText1");
       if (feedbackText1) {
         feedbackText1.addEventListener("click", function (e) {
-          // Please sync "Feedback" to the project
+        window.location.href = '/feedback'
         });
       }
       
@@ -563,11 +568,10 @@
           window.location.href = "/cart";
         });
       }
-      document.getElementById("profile-image").addEventListener("click", function() {
-  window.location.href = "/profile";
-});
+ 
 
       
       </script>
+      <script src="js/dropdown.js"></script>
   </body>
 </html>
