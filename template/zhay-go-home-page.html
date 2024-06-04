@@ -28,7 +28,39 @@
     <link rel="stylesheet" href="css/dropdown.css">
   </head>
   <style>
+    .craving-delicious-food-container{
+    font-size: var(--font-size-8xl);
+    color: var(--color-black);
+    font-family: var(--font-noto-sans-tai-le);
+    }
+.rectangle-parent9:hover{
+  background-color: var(--color-darkslategray-300);
+}
+.rectangle-parent9:hover .shakam-datshi{
+  background-color: var(--color-darkslategray-300);
+  color: white;
+}
+
+.meals-header-parent img {
+   cursor:grab;
+   pointer-events: none;
+  
+}
+   .know-more{
    
+    pointer-events: none; /* Make the element non-clickable */
+    background-color: initial;  
+    cursor: pointer;
+    transition: background-color 0.3s; }
+   
+   frame-child16 {
+    cursor: pointer; 
+    background-color: initial;  
+    transition: background-color 0.3s; }
+
+.frame-child16:hover {  
+    background-color: var(--color-darkslategray-300);
+}
   </style>
   <body>
     <div class="zhaygo-home-page">
@@ -54,6 +86,7 @@
             <img
               class="new-logo-12"
               loading="lazy"
+              id="homelogo"
               alt=""
               src="./images/new-logo-2@2x.png"
             />
@@ -73,7 +106,7 @@
               <div class="about-us-container">
                 <h3 class="about-us2" id="aboutUsText">About us</h3>
               </div>
-              <h3 class="feedback2" id="feedbackText">Feedback</h3>
+              <h3 class="feedback2" id="feedbackText"></h3>
             </nav>
           </nav>
           <img
@@ -123,16 +156,16 @@
                       <div class="craving-delicious-food-explor-wrapper">
                         <h3 class="craving-delicious-food-container">
                           <p class="craving-delicious-food">
-                            Craving delicious food? Explore a wide variety of
+                            Craving delicious food? Explore a wide variety 
                           </p>
                           <p class="restaurants-and-cuisines">
-                            restaurants and cuisines, all in one place.
+                            of restaurants and cuisines, all in one place.
                           </p>
                         </h3>
                       </div>
                     </div>
                     <div class="rectangle-parent7">
-                      <div class="frame-child16"></div>
+                      <a class="frame-child16" href="/menu"></a>
                       <h3 class="know-more">Know more</h3>
                     </div>
                   </div>
@@ -411,7 +444,7 @@
       </div>
       <div class="zhaygo-home-page-child">
         <div class="rectangle-parent12" >
-            <video controls autoplay loop style="width: 1200px;">
+            <video controls loop style="width: 1200px;">
                 <source src="./video/Hello!.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -522,21 +555,22 @@
                           </div>
                         </div>
                       </div>
-                      <div class="feedback3" id="feedbackText1">Feedback</div>
+                    
                       <div class="cart2" id="cartText">Cart</div>
+                     
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="frame-parent45">
-              <div class="c-group">
+              <!-- <div class="c-group">
                 <div class="c1">c</div>
                 <div class="frame-child34"></div>
-              </div>
+              </div> -->
               <div class="zheygo-2024-all-rights-reserv-container">
                 <div class="zheygo-2024-all1">
-                  Zheygo 2024. All Rights Reserved.
+                  © Zheygo 2024. All Rights Reserved.
                 </div>
               </div>
             </div>
@@ -605,13 +639,7 @@
 
       
       
-      var feedbackText = document.getElementById("feedbackText");
-      if (feedbackText) {
-        feedbackText.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
-        });
-      }
-      
+     
       var groupContainer = document.getElementById("groupContainer");
       if (groupContainer) {
         groupContainer.addEventListener("click", function (e) {
@@ -639,16 +667,18 @@
       var aboutUsText1 = document.getElementById("aboutUsText1");
       if (aboutUsText1) {
         aboutUsText1.addEventListener("click", function (e) {
-          window.location.href = "/cart";
+          window.location.href = "/aboutus";
         });
       }
-      
-      var feedbackText1 = document.getElementById("feedbackText1");
-      if (feedbackText1) {
-        feedbackText1.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
+      var home = document.getElementById("homelogo");
+      if (home) {
+        home.addEventListener("click", function (e) {
+          window.location.href = "/home";
         });
       }
+    
+    
+  
       
       var cartText = document.getElementById("cartText");
       if (cartText) {
@@ -656,6 +686,7 @@
           window.location.href = "/cart";
         });
       }
+      
 
       </script>
 <script src="js/dropdown.js"></script>

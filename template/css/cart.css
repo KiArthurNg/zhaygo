@@ -8,6 +8,7 @@
 
 }
 
+
 .cart-inner {
   display: flex; /* Use flexbox */
   margin-bottom: 20px; /* Adjust margin as needed */
@@ -64,4 +65,8 @@
 .group-icon {
   width: 180px; /* Adjust width to be three times bigger */
   height: 180px; /* Adjust height to be three times bigger */
+}
+.ema-datshi-wrapper{
+
+  width: 300px;
 }

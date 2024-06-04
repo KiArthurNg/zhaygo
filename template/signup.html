@@ -22,85 +22,93 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap"
     />
-  </head>
-  <style>
-    .frame-parent26, .frame-wrapper18, .image-1-group{
-      margin-top: 0;
-    }
-    .frame-wrapper18{
-      padding-top: 0;
-    }
-      .togglePassword{
-      cursor:pointer;
-    }
-    .login2{
-      color: white;
-    }
-    .group-div {
-    font-weight: bold;
-    cursor: pointer; /* Changes cursor to a pointer on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for the hover effect */
-}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
 
-button{
-  border: none;
-  outline: none;
-}
-.login2:hover {
-    /* background-color: #f0f0f0; Change background color on hover */
-    color: #333; /* Change text color on hover */
-}
-    #name,#contactNumber,#email,#password,#confirmPassword{
-      width: 100%;
-    }
-    .login-mail-parent{
-    align-self: stretch;
-    height: 56px;
-    margin-top: 30px;
-    position: relative;
-    max-width: 100%;
-    }
-    .image-1-group{
-      width: 100vw;
-    }
-    .signup {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: var(--color-floralwhite);
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: var(--padding-35xl) var(--padding-xl) var(--padding-36xl);
-    box-sizing: border-box;
-    line-height: normal;
-    letter-spacing: normal;
-    padding-top: 10px;
-}
-.login-mail-parent1{
-  align-self: stretch;
-    height: 56px;
-    margin-top: 0px;
-    position: relative;
-    max-width: 100%;
-}
-.image-1-group {
-    width: 984px;
-    backdrop-filter: blur(40px);
-    background-color: var(--color-white);
-    flex-direction: column;
-    align-items: center;
-    padding: var(--padding-17xl) var(--padding-xl) 65px var(--padding-2xl);
-    gap: 50px;
-    text-align: left;
-    font-size: var(--font-size-5xl);
-    color: var(--color-gray-100);
-    font-family: var(--font-inter);
-    
-}
-  </style>
+
+      .frame-parent26, .frame-wrapper18, .image-1-group {
+        margin-top: 0;
+      }
+      .frame-wrapper18 {
+        padding-top: 0;
+      }
+      .togglePassword {
+        cursor: pointer;
+      }
+      .login2 {
+        color: white;
+      }
+      .group-div {
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      button {
+        border: none;
+        outline: none;
+      }
+      .login2:hover {
+        color: #333;
+      }
+      #name, #contactNumber, #email, #password, #confirmPassword {
+        width: 100%;
+      }
+      .login-mail-parent {
+        align-self: stretch;
+        height: 56px;
+        margin-top: 30px;
+        position: relative;
+        max-width: 100%;
+      }
+      .image-1-group {
+        width: 100vw;
+      }
+      .signup {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background-color: var(--color-floralwhite);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: var(--padding-35xl) var(--padding-xl) var(--padding-36xl);
+        box-sizing: border-box;
+        line-height: normal;
+        letter-spacing: normal;
+        padding-top: 10px;
+      }
+      .login-mail-parent1 {
+        align-self: stretch;
+        height: 56px;
+        margin-top: 0px;
+        position: relative;
+        max-width: 100%;
+      }
+      .image-1-group {
+        width: 984px;
+        backdrop-filter: blur(40px);
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: center;
+        padding: var(--padding-17xl) var(--padding-xl) 65px var(--padding-2xl);
+        gap: 50px;
+        text-align: left;
+        font-size: var(--font-size-5xl);
+        color: var(--color-gray-100);
+        font-family: var(--font-inter);
+      }
+      .error-message {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 5px;
+        position: absolute;
+        top: -20px;
+        left: 0;
+      }
+    </style>
+  </head>
   <body>
     <div class="signup">
       <section class="image-1-group">
@@ -126,6 +134,7 @@ button{
             <div class="frame-parent25">
               <div class="login-mail-parent1">
                 <div class="login-mail">
+                  <div class="error-message" id="nameError"></div>
                   <div class="login-mail-child"></div>
                   <input
                     class="email-address1"
@@ -134,10 +143,10 @@ button{
                     id="name"
                   />
                 </div>
-                
               </div>
               <div class="login-mail-parent">
                 <div class="login-mail">
+                  <div class="error-message" id="emailError"></div>
                   <div class="login-mail-child"></div>
                   <input
                     class="email-address1"
@@ -146,10 +155,10 @@ button{
                     id="email"
                   />
                 </div>
-                
               </div>
               <div class="login-password-parent">
                 <div class="login-password">
+                  <div class="error-message" id="contactNumberError"></div>
                   <div class="login-password-child"></div>
                   <input
                     class="password1"
@@ -158,11 +167,10 @@ button{
                     id="contactNumber"
                   />
                 </div>
-               
-               
               </div>
               <div class="login-password-parent">
                 <div class="login-password">
+                  <div class="error-message" id="passwordError"></div>
                   <div class="login-password-child"></div>
                   <input
                     class="password1"
@@ -170,12 +178,12 @@ button{
                     type="password"
                     id="password"
                   />
+                  <img class="frame-child11" id="togglePassword" alt="" src="./images/group-41.svg" />
                 </div>
-               
-                <img class="frame-child11" id="togglePassword" alt="" src="./images/group-41.svg" />
               </div>
               <div class="login-password-parent">
                 <div class="login-password">
+                  <div class="error-message" id="confirmPasswordError"></div>
                   <div class="login-password-child"></div>
                   <input
                     class="password1"
@@ -183,14 +191,10 @@ button{
                     type="password"
                     id="confirmPassword"
                   />
+                  <img class="frame-child11" id="togglePassword1" alt="" src="./images/group-41.svg" />
                 </div>
-                
-                <img class="frame-child11" id="togglePassword1" alt="" src="./images/group-41.svg" />
               </div>
             </div>
-            
-            
-            
           </div>
         </div>
         <div class="frame-wrapper18">
@@ -200,7 +204,6 @@ button{
                 <button type="submit" class="group-div" id="signup">
                   <div class="instance-child5"></div>
                   <div class="login2" style="font-weight: bold;">SIGNUP</div>
-
                 </button>
               </div>
             </div>
@@ -217,77 +220,112 @@ button{
             </div>
           </div>
         </div>
+      
+  
       </section>
       <div class="new-logo-11"></div>
     </div>
 
     <script>
-      
-
       var signupButton = document.getElementById("signup");
       if (signupButton) {
-  signupButton.addEventListener("click", async function () {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const contactNumber = document.getElementById('contactNumber').value;
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    let hasError = false;
+        signupButton.addEventListener("click", async function () {
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const contactNumber = document.getElementById('contactNumber').value;
+          const password = document.getElementById('password').value;
+          const confirmPassword = document.getElementById('confirmPassword').value;
 
+          let hasError = false;
 
-    if (hasError) {
-      return;
-    }
+          // Clear previous error messages
+          document.getElementById('nameError').textContent = '';
+          document.getElementById('emailError').textContent = '';
+          document.getElementById('contactNumberError').textContent = '';
+          document.getElementById('passwordError').textContent = '';
+          document.getElementById('confirmPasswordError').textContent = '';
 
-    try {
-  const response = await fetch('http://localhost:3000/signup', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ name, email, contactNumber, password, confirmPassword }),
-  });
+          // Validate fields
+          if (!name) {
+            document.getElementById('nameError').textContent = 'Name is required';
+            hasError = true;
+          }
+          if (!email) {
+            document.getElementById('emailError').textContent = 'Email address is required';
+            hasError = true;
+          }
+          if (!contactNumber) {
+            document.getElementById('contactNumberError').textContent = 'Contact number is required';
+            hasError = true;
+          }
+          if (!password) {
+            document.getElementById('passwordError').textContent = 'Password is required';
+            hasError = true;
+          }
+          if (!confirmPassword) {
+            document.getElementById('confirmPasswordError').textContent = 'Confirm password is required';
+            hasError = true;
+          }
+          if (password !== confirmPassword) {
+            document.getElementById('confirmPasswordError').textContent = 'Passwords do not match';
+            hasError = true;
+          }
 
-  const data = await response.json();
+          if (hasError) {
+            return;
+          }
 
-  if (response.ok) {
-    alert('Sign up successful');
-    console.log(data);
-  } else {
-    alert(`Error: ${data.message}`);
-  }
-} catch (error) {
-  console.error('Error signing up:', error);
-  alert('Internal server error');
-}
-  });
-}
+          try {
+            const response = await fetch('http://localhost:3000/signup', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ name, email, contactNumber, password, confirmPassword }),
+            });
 
-var loginButton = document.getElementById("loginButton");
-if (loginButton) {
-  loginButton.addEventListener("click", function (e) {
-    // Redirect to login page
-    window.location.href = '/'; // Update this with the actual login page URL
-  });
-}
-</script>
-<script>
+            const data = await response.json();
+
+            if (response.ok) {
+              showToast()
+              console.log(data);
+            } else {
+              alert(`Error: ${data.message}`);
+            }
+          } catch (error) {
+            console.error('Error signing up:', error);
+            alert('Internal server error');
+          }
+        });
+      }
+
+      var loginButton = document.getElementById("loginButton");
+      if (loginButton) {
+        loginButton.addEventListener("click", function (e) {
+          // Redirect to login page
+          window.location.href = '/'; // Update this with the actual login page URL
+        });
+      }
+
       document.getElementById("togglePassword").addEventListener("click", function() {
-    var passwordField = document.getElementById("password");
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-    } else {
-        passwordField.type = "password";
-    }
-});
-document.getElementById("togglePassword1").addEventListener("click", function() {
-    var passwordField = document.getElementById("confirmPassword");
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-    } else {
-        passwordField.type = "password";
-    }
-});
-</script>
+        var passwordField = document.getElementById("password");
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      });
+
+      document.getElementById("togglePassword1").addEventListener("click", function() {
+        var passwordField = document.getElementById("confirmPassword");
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      });
+
+    </script>
+  
   </body>
 </html>

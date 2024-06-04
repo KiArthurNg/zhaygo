@@ -1468,7 +1468,7 @@ object-fit:contain;
 }
 .zhaygo-about-us-page {
   width: 100%;
-  height: 4403px;
+  height: 100%;
   position: relative;
   background-color: var(--color-ivory);
   overflow: hidden;

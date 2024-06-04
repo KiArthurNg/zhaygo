@@ -194,13 +194,14 @@
 .wrapper-group-118,
 .wrapper-group-118-child {
   position: absolute;
+
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
 }
 .wrapper-group-118-child {
-  object-fit: contain;
+  /* object-fit: contain; */
   top: 9px;
   transform: scale(1.03);
 }
@@ -272,7 +273,8 @@
 }
 .description-parent {
   width: 100%;
-  height: 660px;
+  height: 90vh;
+
   position: absolute;
   margin: 0 !important;
   top: 98px;
@@ -416,7 +418,7 @@ padding: 2cm;
   max-height: 100%;
 }
 .order-in-feast {
-  margin: 0;
+  position:absolute;
   font-size: inherit;
   font-weight: 500;
   font-family: inherit;
@@ -692,11 +694,13 @@ padding: 2cm;
   z-index: 1;
 }
 .potato-button-rect-parent {
-  height: 36px;
-  width: 98px;
-  position: relative;
-  z-index: 1;
-  color: var(--color-white);
+
+    height: 36px;
+    width: 98px;
+    position: relative;
+    color: var(--color-white);
+    font-family: var(--font-inter);
+
 }
 .frame-parent52 {
   align-self: stretch;
@@ -1076,6 +1080,8 @@ padding: 2cm;
   position: relative;
   z-index: 1;
 }
+
+
 .instance-wrapper6 {
   display: flex;
   flex-direction: column;
@@ -1101,7 +1107,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1213,7 +1219,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1307,7 +1313,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1409,7 +1415,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1523,7 +1529,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1635,7 +1641,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1740,7 +1746,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-coral);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -1834,6 +1840,7 @@ padding: 2cm;
   font-size: var(--font-size-17xl);
   color: var(--color-black);
   font-family: var(--font-inter);
+  margin-top: 20vh;
 }
 .non-veg {
   margin: 0;
@@ -2438,7 +2445,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-chocolate-400);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -2548,7 +2555,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-chocolate-400);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -2646,7 +2653,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-chocolate-400);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -2751,7 +2758,7 @@ padding: 2cm;
   top: 0;
   left: 0;
   border-radius: var(--br-10xs);
-  background-color: var(--color-chocolate-400);
+  background-color: var(--color-chocolate-100);
   width: 90px;
   height: 36px;
   z-index: 1;
@@ -2912,8 +2919,11 @@ padding: 2cm;
   position: relative;
   font-size: var(--font-size-xl);
   font-family: var(--font-noto-sans-tai-le);
-  color: var(--color-black);
-  text-align: left;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: bolder;
+  margin-left: auto;
+  margin-right: auto;
   display: inline-block;
   min-width: 71px;
   z-index: 1;
@@ -2934,6 +2944,15 @@ padding: 2cm;
   justify-content: flex-start;
   box-sizing: border-box;
   z-index: 1;
+}
+.restaurant-image,.instance-child11{
+  cursor: pointer;
+}
+h2{
+  pointer-events: none;
+  margin-left: auto;
+  margin-left: auto;
+  text-align: center;
 }
 .rectangle-parent35:hover {
   background-color: #f57a1c;
@@ -3040,11 +3059,24 @@ padding: 2cm;
   margin: 0;
   position: absolute;
   top: 47.06%;
-  left: 34.18%;
+  left: 33.18%;
   font-size: inherit;
   font-weight: 400;
   font-family: inherit;
   z-index: 2;
+}
+
+.instance-child8:hover{
+  background-color:var( --color-darkslategray-300);
+  backdrop-filter: blur(10px);
+}
+.instance-child11:hover{
+  background-color:var( --color-darkslategray-300);
+  backdrop-filter: blur(10px);
+}
+.restaurant-image:hover{
+  background-color:var( --color-darkslategray-300);
+  backdrop-filter: blur(10px);
 }
 .component-5 {
   height: 340px;
@@ -3092,8 +3124,8 @@ padding: 2cm;
 .village-restaurant1 {
   margin: 0;
   position: absolute;
-  top: 50%;
-  left: 30.07%;
+  top: 47.06%;
+  left: 30%;
   font-size: inherit;
   font-weight: 400;
   font-family: inherit;
@@ -3128,13 +3160,16 @@ padding: 2cm;
   gap: var(--gap-63xl);
   max-width: 100%;
 }
+.inner-delivery-two{
+  padding-bottom: 50px;
+}
 .featured-restaurant-content-wrapper {
   align-self: stretch;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 var(--padding-xl) 210px var(--padding-2xl);
+  padding: 0 var(--padding-xl) 100px var(--padding-2xl);
   box-sizing: border-box;
   max-width: 100%;
   text-align: left;

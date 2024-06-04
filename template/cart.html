@@ -29,6 +29,28 @@
   </head>
 
   <style>
+    .group-icon{
+      cursor: pointer;
+    }
+    #cart-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows wrapping to the next line if there are too many items in one row */
+  gap: 16px; /* Adjust gap between items as needed */
+  width: 100%;
+}
+.rectangle-container img {
+  width: 180px;
+  height: 180px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.cart-inner {
+  flex: 0 1 calc(80% - 16px); /* Adjust the width of the items, -16px accounts for the gap */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
     .menu6{
       text-decoration: none;
     }
@@ -88,7 +110,7 @@
             <div class="about-us-frame">
               <div class="about-us4" id="aboutUsText">About us</div>
             </div>
-            <div class="feedback4" id="feedbackText">Feedback</div>
+            <div class="feedback4" id="feedbackText"></div>
           </nav>
         </nav>
         <img
@@ -105,38 +127,9 @@
       </div>
       </header>
       <body>
-       <div class="parent-container">
-  <div class="cart-inner">
-    <div class="rectangle-group">
-      <div class="rectangle-div"></div>
-      <div class="rectangle-container">
-        <img
-          class="rectangle-icon"
-          loading="lazy"
-          alt=""
-          src="./images/rectangle-178@2x.png"
-        />
-        <div class="ema-datshi-wrapper">
-          <h1 class="ema-datshi">Ema datshi</h1>
+        <div class="parent-container" id="cart-container">
+          <!-- Items will be dynamically inserted here -->
         </div>
-      </div>
-      <div class="frame-container">
-        <div class="frame-div">
-          <div class="nu-150-wrapper">
-            <div class="nu-150">Nu. 150</div>
-          </div>
-          <img
-            class="group-icon"
-            loading="lazy"
-            alt=""
-            src="./images/group-133600.svg"
-            id="group1"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
       </body>
       <footer class="footer2">
@@ -217,7 +210,7 @@
                         <div class="about-us6" id="aboutUsText2">About us</div>
                       </div>
                     </div>
-                    <div class="feedback6" id="feedbackText2">Feedback</div>
+                 
                     <div class="cart3" id="cartText">Cart</div>
                   </div>
                 </div>
@@ -225,13 +218,10 @@
             </div>
           </div>
           <div class="copyright-content-parent">
-            <div class="copyright-content">
-              <div class="c2">c</div>
-              <div class="copyright-content-child"></div>
-            </div>
+            
             <div class="zheygo-2024-all-rights-reserv-frame">
               <div class="zheygo-2024-all2">
-                Zheygo 2024. All Rights Reserved.
+                © Zheygo 2024. All Rights Reserved.
               </div>
             </div>
           </div>
@@ -297,13 +287,7 @@
         document.querySelector('.instance-child11').addEventListener('click', function() {
         window.location.href = '/villagerestaurant'; // Replace with the actual path to the next HTML page
       });
-          
-      var feedbackText1 = document.getElementById("feedbackText1");
-      if (feedbackText1) {
-        feedbackText1.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
-        });
-      }
+     
       
       var homeText2 = document.getElementById("homeText2");
       if (homeText2) {
@@ -346,13 +330,7 @@
           window.location.href = "/aboutus";
         });
       }
-      
-      var feedbackText2 = document.getElementById("feedbackText2");
-      if (feedbackText2) {
-        feedbackText2.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
-        });
-      }
+     
       
       var cartText = document.getElementById("cartText");
       if (cartText) {
@@ -363,6 +341,66 @@
       // document.getElementById("profile-image").addEventListener("click", function() {
 //   window.location.href = "/profile";
 // });
+
+      </script>
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Retrieve the cart array from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Get the parent container where items will be inserted
+    const cartContainer = document.getElementById('cart-container');
+
+    // Iterate over the cart array and create HTML elements for each item
+    cart.forEach((dish, index) => {
+        // Create a new div for the cart item
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-inner';
+
+        // Create the HTML structure for the item
+        cartItem.innerHTML = `
+          <div class="rectangle-group">
+            <div class="rectangle-div"></div>
+            <div class="rectangle-container">
+              <img class="rectangle-icon" loading="lazy" alt="" src="${dish.image}" />
+              <div class="ema-datshi-wrapper">
+                <h1 class="ema-datshi">${dish.name}</h1>
+              </div>
+            </div>
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="nu-150-wrapper">
+                  <div class="nu-150">Nu. 150</div>
+                </div>
+                <img class="group-icon" loading="lazy" alt="" src="./images/group-133600.svg" data-index="${index}" />
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Append the new cart item to the parent container
+        cartContainer.appendChild(cartItem);
+    });
+
+    // Add event listener to group icons for removing rows
+    const groupIcons = document.querySelectorAll('.group-icon');
+    groupIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            // Get the index of the clicked icon
+            const indexToRemove = parseInt(icon.getAttribute('data-index'));
+
+            // Find the parent row of the clicked icon and remove it
+            const rowToRemove = icon.closest('.cart-inner');
+            rowToRemove.remove();
+
+            // Remove the corresponding item from the cart array
+            cart.splice(indexToRemove, 1);
+
+            // Update the cart in localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        });
+    });
+});
 
       </script>
       <script src="./js/heartsign.js"></script>

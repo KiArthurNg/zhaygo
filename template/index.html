@@ -10,9 +10,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script:wght@400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+New+Tai+Lue:wght@500&display=swap" rel="stylesheet">
   <title>Login</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
   <style>
+
+.custom-swal-container {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .custom-swal-title {
+            color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .custom-swal-content {
+            color: #000000;
+            font-size: 18px;
+        }
+        div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+          background-color: #DB6103;
+        }
+        .custom-swal-confirm-button {
+            background-color: #DB6103;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 24px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .custom-swal-confirm-button:hover {
+            background-color: #07414f;
+        }
     .togglePassword{
       cursor:pointer;
     }
@@ -92,7 +126,20 @@ button{
           </div>
         </div>
       </div>
+      
     </section>
+    <div class="toast">
+      <div class="toast-content">
+          <i class="fas fa-solid fa-check check" style="display: none;"></i>
+          <div class="message">
+              <span class="text text-1"></span>
+              <span class="text text-2"></span>
+          </div>
+      </div>
+      <i class="fa-solid fa-xmark close"></i>
+      <div class="progress"></div>
+  </div>
+
     <div class="new-logo-11"></div>
   </div>
 
@@ -156,15 +203,23 @@ button{
                 // Save token to localStorage
                 localStorage.setItem('token', data.token); // Save the token for future requests
 
-                alert('Login successful');
+                showAlert()
                 // Redirect to home page after successful login
-                window.location.href = '/home';
+                const delay = 1300;
+
+              // // Set a timeout to redirect after the delay
+              // setTimeout(() => {
+              //     window.location.href = '/home';
+              // }, delay);
+               
             } else {
-                alert(`Error: ${data.message}`);
+                // alert(`Error: ${data.message}`);
+                showToast('error')
             }
         } catch (error) {
             console.error('Error logging in:', error);
-            alert('Internal server error');
+            // alert('Internal server error');
+            showToast('error')
         } finally {
             loginButton.disabled = false;
             loginButton.style.cursor = 'pointer';
@@ -173,7 +228,24 @@ button{
     document.getElementById("signup").addEventListener("click", function() {
   window.location.href = "/signup";
 });
-
+function showAlert() {
+            Swal.fire({
+                title: 'Logged in Successful!',
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                customClass: {
+                    container: 'custom-swal-container',
+                    title: 'custom-swal-title',
+                    content: 'custom-swal-content',
+                    confirmButton: 'custom-swal-confirm-button',
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/home';
+                }
+            });
+        }
 </script>
 
 

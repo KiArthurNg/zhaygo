@@ -27,6 +27,16 @@
     <script src="./js/profile.js"></script>
   </head>
   <style>
+.instance-child14:hover,.instance-child15:hover,.instance-child17:hover,.instance-child18:hover{
+  background-color: #07414f;
+}
+.instance-child14,.instance-child15,.instance-child17,.instance-child18{
+  cursor: pointer;
+      /* pointer-events: none; */
+}
+
+
+
     .order22{
       cursor: pointer;
       pointer-events: none;
@@ -63,9 +73,10 @@
         <div class="frame-wrapper37">
           <div class="frame-parent68">
             <div class="feedback-wrapper">
-              <div class="feedback8" id="feedbackText">Feedback</div>
+              <div class="feedback8" id="feedbackText"></div>
             </div>
             <div class="frame-wrapper38">
+
               <img
                 class="frame-child84"
                 loading="lazy"
@@ -447,7 +458,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="feedback9" id="feedbackText2">Feedback</div>
+                      <div class="feedback9" id="feedbackText2">
+
+                      </div>
                       <div class="cart4" id="cartText">Cart</div>
                     </div>
                   </div>
@@ -494,12 +507,7 @@
     </div>
 
     <script>
-      var feedbackText1 = document.getElementById("feedbackText1");
-      if (feedbackText1) {
-        feedbackText1.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
-        });
-      }
+    
       
       var homeText2 = document.getElementById("homeText2");
       if (homeText2) {
@@ -543,12 +551,7 @@
         });
       }
       
-      var feedbackText = document.getElementById("feedbackText");
-      if (feedbackText) {
-        feedbackText.addEventListener("click", function (e) {
-         window.location.href = "/feedback"
-        });
-      }
+      
       
       var menuText3 = document.getElementById("menuText3");
       if (menuText3) {

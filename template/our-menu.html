@@ -28,16 +28,25 @@
   </head>
 
   <style>
+    .enjoy-our-delicious-food-in-th{
+      color: #000000;
+    }
+.order-in-feast{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
   .rectangle-parent16 {
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
 }
+
 
 .modal {
     display: none;
@@ -73,17 +82,42 @@
     cursor: pointer;
     z-index: 1001;
 }
+   
+o{
+    cursor: pointer; 
+    background-color: initial;  
+    transition: background-color 0.3s; }
 
+#o:hover {  
+  cursor: pointer;
+    background-color: var(--color-darkslategray-300);
+}
 video {
     width: 100%;
     height: 100%;
     border-radius: 0 0 10px 10px;
     object-fit: cover;
 }
-    .order,.order2,.order1,.order3,.order12{
-      cursor: pointer;
-      pointer-events: none;
-    }
+b{
+  pointer-events: none;
+}
+#svgImage{
+  cursor: pointer;
+}
+.orderButton{
+  outline: none;
+  border: none;
+}
+.whether-youre-craving-classic{
+ color: var(--color-black);
+ /* font-size: var(--font-size-13xl); */
+}
+.our-menu1{
+  font-size: var(--font-size-77xl);
+    font-weight: 700;
+    font-family: inherit;
+}
+
     :root {
         --font-size-17xl: 34px; /* Adjust as necessary */
         --color-black: #000000;
@@ -125,7 +159,7 @@ video {
             <div class="about-us-frame">
               <div class="about-us4" id="aboutUsText">About us</div>
             </div>
-            <div class="feedback4" id="feedbackText">Feedback</div>
+            <div class="feedback4" id="feedbackText"></div>
           </nav>
         </nav>
         <img
@@ -161,12 +195,7 @@ video {
           />
         </div>
         <div class="menu-description">
-          <img
-            class="menu-description-child"
-            loading="lazy"
-            alt=""
-            src="./images/arrow-1.svg"
-          />
+        
 
           <div class="our-menu-whether-container">
             <p class="our-menu1">
@@ -177,13 +206,13 @@ video {
                 </span>
               </b>
             </p>
-            <p class="blank-line2">
+            <!-- <p class="blank-line2">
               <b>
                 <span>
                   <span>&nbsp;</span>
                 </span>
               </b>
-            </p>
+            </p> -->
             <p class="blank-line3">
               <b>
                 <span>
@@ -214,66 +243,6 @@ video {
       <div class="our-menu-item"></div>
       <section class="our-menu-inner">
         <div class="inner-delivery-two-parent">
-          <div class="inner-delivery-two">
-            <img
-              class="image-27-icon"
-              loading="lazy"
-              alt=""
-              src="./images/image-27@2x.png"
-            />
-
-            <div class="inner-delivery-three-wrapper">
-              <div class="inner-delivery-three">
-                <div class="we-offer-you-container">
-                  <p style="white-space: nowrap;">
-                    <span style="
-                        font-size: 29px; 
-                        font-weight: 600; 
-                        font-family: var(--font-inter); 
-                        color: var(--color-black);">
-                        We offer you
-                    </span>
-                    <span style="
-                        font-size: 35px; /* Ensure font sizes are consistent */
-                        font-weight: 600; 
-                        color: var(--color-chocolate-100);">
-                        DELIVERYSERVICES
-                    </span>
-                </p>
-                  <p class="blank-line4">
-                    <span>
-                      <span class="blank-line5">&nbsp;</span>
-                    </span>
-                  </p>
-                  <p class="enjoy-our-delicious-food-in-th">
-                    <span>
-                      <span
-                        >Enjoy our delicious food in the comfort of your own
-                        home. We provide convenient delivery options for our
-                        entire menu. Whether you're craving a quick lunch or a
-                        relaxing dinner, let us bring the flavors to you!</span
-                      >
-                    </span>
-                  </p>
-                </div>
-                <div class="inner-delivery-three-inner">
-                  <button class="rectangle-parent16" id="orderButton">
-                    <div class="instance-child8"></div>
-                    <b class="how-to-order">How to order</b>
-                  </button>
-                </div>
-                <div id="modal" class="modal">
-                  <div class="modal-content">
-                      <span class="close-button" id="closeButton">&times;</span>
-                      <video id="orderVideo" controls>
-                          <source src="./video/Hello!.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                      </video>
-                  </div>
-              </div>
-              </div>
-            </div>
-          </div>
           <div class="frame-wrapper34">
             <div class="vector-group">
               <img
@@ -317,8 +286,9 @@ video {
                 <img
                   class="order-inner-item"
                   loading="lazy"
+                  id="curryImg"
                   alt=""
-                  src="./images/rectangle-93@2x.png"
+                  src="./images/ema.jpg"
                 />
 
                 <div class="frame-parent51 " >
@@ -333,11 +303,11 @@ video {
                   
                   
                   <div class="ema-datshi-container">
-                    <div class="ema-datshi2">Ema datshi</div>
+                    <div class="ema-datshi2" id="curryName">Ema datshi</div>
                   </div>
-                  <div class="rectangle-parent17">
-                    <div class="instance-child9"></div>
-                    <div class="order">Order</div>
+                  <div class="potato-order-btn ema">
+                    <div class="potato-order-area" id="o" ></div>
+                    <b class="order5">Order</b>
                   </div>
                 </div>
               </div>
@@ -348,6 +318,7 @@ video {
                     class="frame-child41"
                     loading="lazy"
                     alt=""
+                    id="curryImg"
                     src="./images/rectangle-100@2x.png"
                   />
 
@@ -361,11 +332,11 @@ video {
                       />
                     </div>
                     <div class="potato-wrapper">
-                      <div class="potato">Potato</div>
+                      <div class="potato" id="curryName">Potato</div>
                     </div>
-                    <div class="potato-button-rect-parent">
-                      <div class="potato-button-rect"></div>
-                      <div class="order1">Order</div>
+                    <div class="potato-order-btn kewa">
+                      <div class="potato-order-area" id="o" ></div>
+                      <b class="order5">Order</b>
                     </div>
                   </div>
                 </div>
@@ -376,6 +347,7 @@ video {
                   class="order-inner-child1"
                   loading="lazy"
                   alt=""
+                  id="curryImg"
                   src="./images/rectangle-126@2x.png"
                 />
 
@@ -389,11 +361,11 @@ video {
                     />
                   </div>
                   <div class="asparagus-wrapper">
-                    <div class="asparagus">Asparagus</div>
+                    <div class="asparagus" id="curryName">Asparagus</div>
                   </div>
-                  <div class="rectangle-parent19">
-                    <div class="instance-child10"></div>
-                    <div class="order2">Order</div>
+                  <div class="potato-order-btn apa">
+                    <div class="potato-order-area" id="o" ></div>
+                    <b class="order5">Order</b>
                   </div>
                 </div>
               </div>
@@ -421,9 +393,9 @@ video {
                 <div class="spinach-wrapper">
                   <div class="spinach">Spinach</div>
                 </div>
-                <div class="spinach-button-rect-parent">
-                  <div class="spinach-button-rect"></div>
-                  <div class="order3">Order</div>
+                <div class="potato-order-btn spa">
+                  <div class="potato-order-area" id="o" ></div>
+                  <b class="order5">Order</b>
                 </div>
               </div>
             </div>
@@ -450,9 +422,9 @@ video {
                     <div class="cauliflower-title-inner">
                       <div class="fried-cauli-flower">Fried cauli-flower</div>
                     </div>
-                    <div class="cauliflower-button-rect-parent">
-                      <div class="cauliflower-button-rect"></div>
-                      <div class="order4">Order</div>
+                    <div class="potato-order-btn cali">
+                      <div class="potato-order-area" id="o"></div>
+                      <b class="order5">Order</b>
                     </div>
                   </div>
                 </div>
@@ -480,8 +452,8 @@ video {
                   <div class="potato-item">
                     <div class="potato1">Potato</div>
                   </div>
-                  <div class="potato-order-btn">
-                    <div class="potato-order-area"></div>
+                  <div class="potato-order-btn kewa">
+                    <div class="potato-order-area" id="o"></div>
                     <b class="order5">Order</b>
                   </div>
                 </div>
@@ -511,8 +483,8 @@ video {
                   <div class="kewa-dish-name">
                     <div class="kewa-datshi1">Kewa datshi</div>
                   </div>
-                  <div class="kewa-order">
-                    <div class="kewa-order-area"></div>
+                  <div class="kewa-order kewad">
+                    <div class="kewa-order-area" id="o"></div>
                     <b class="order6">Order</b>
                   </div>
                 </div>
@@ -536,10 +508,10 @@ video {
                     />
                   </div>
                   <div class="spinach-container">
-                    <div class="spinach1">Spinach</div>
+                    <div class="spinach1">Egg</div>
                   </div>
-                  <div class="rectangle-parent22">
-                    <div class="frame-child53"></div>
+                  <div class="rectangle-parent22 egg">
+                    <div class="frame-child53" id="o"></div>
                     <b class="order7">Order</b>
                   </div>
                 </div>
@@ -569,8 +541,8 @@ video {
                       <div class="cheese-asperagus-wrapper">
                         <div class="cheese-asperagus">Cheese Asperagus</div>
                       </div>
-                      <div class="cheese-order">
-                        <div class="cheese-order-area"></div>
+                      <div class="cheese-order cheapa">
+                        <div class="cheese-order-area" id="o"></div>
                         <b class="order8">Order</b>
                       </div>
                     </div>
@@ -599,8 +571,8 @@ video {
                     <div class="fried-cheese-wrapper">
                       <div class="fried-cheese">Fried cheese</div>
                     </div>
-                    <div class="fried-order">
-                      <div class="fried-order-area"></div>
+                    <div class="fried-order friche">
+                      <div class="fried-order-area" id="o"></div>
                       <b class="order9">Order</b>
                     </div>
                   </div>
@@ -629,8 +601,8 @@ video {
                     <div class="potato-dish-name">
                       <div class="potato2">Potato</div>
                     </div>
-                    <div class="potato-order">
-                      <div class="potato-order-area1"></div>
+                    <div class="potato-order kewa">
+                      <div class="potato-order-area1 " id="o"></div>
                       <b class="order10">Order</b>
                     </div>
                   </div>
@@ -654,12 +626,15 @@ video {
                         src="./images/vector-15.svg"
                       />
                     </div>
-                    <div class="potato-container">
+                    <div class="potato-container kewa">
                       <div class="potato3">Potato</div>
                     </div>
                     <div class="rectangle-parent23">
-                      <div class="frame-child56"></div>
+                      <div class="frame-child56" id="o"></div>
                       <b class="order11">Order</b>
+
+
+
                     </div>
                   </div>
                 </div>
@@ -701,8 +676,8 @@ video {
                   <div class="shakam-names">
                     <div class="shakam-paa">Shakam paa</div>
                   </div>
-                  <div class="shakam-order">
-                    <div class="shakam-order-area"></div>
+                  <div class="shakam-order shakam">
+                    <div class="shakam-order-area" id="o"></div>
                     <b class="order12">Order</b>
                   </div>
                 </div>
@@ -731,8 +706,8 @@ video {
                         <div class="shakam-datshi-wrapper">
                           <div class="shakam-datshi1">Shakam datshi</div>
                         </div>
-                        <div class="shakam-datshi-order">
-                          <div class="shakam-datshi-order-area"></div>
+                        <div class="shakam-datshi-order shadat">
+                          <div class="shakam-datshi-order-area" id="o"></div>
                           <b class="order13">Order</b>
                         </div>
                       </div>
@@ -761,8 +736,8 @@ video {
                   <div class="pork-names">
                     <div class="chicken">Chicken</div>
                   </div>
-                  <div class="chicken-card">
-                    <div class="chicken-image-area"></div>
+                  <div class="chicken-card chick">
+                    <div class="chicken-image-area" id="o"></div>
                     <b class="order14">Order</b>
                   </div>
                 </div>
@@ -790,8 +765,8 @@ video {
                   <div class="dry-fish-wrapper">
                     <div class="dry-fish">Dry fish</div>
                   </div>
-                  <div class="rectangle-parent25">
-                    <div class="frame-child62"></div>
+                  <div class="rectangle-parent25 dryfish">
+                    <div class="frame-child62" id="o"></div>
                     <b class="order15">Order</b>
                   </div>
                 </div>
@@ -818,8 +793,8 @@ video {
                     <div class="dry-fish-card">
                       <div class="dry-fish1">Dry fish</div>
                     </div>
-                    <div class="dry-fish-order">
-                      <div class="dry-fish-order-area"></div>
+                    <div class="dry-fish-order dryfish">
+                      <div class="dry-fish-order-area" id="o"></div>
                       <b class="order16">Order</b>
                     </div>
                   </div>
@@ -847,8 +822,8 @@ video {
                     <div class="chicken-potato-wrapper">
                       <div class="chicken-potato">Chicken-potato</div>
                     </div>
-                    <div class="pork-order">
-                      <div class="pork-order-area"></div>
+                    <div class="pork-order chickenpo">
+                      <div class="pork-order-area" id="o"></div>
                       <b class="order17">Order</b>
                     </div>
                   </div>
@@ -877,8 +852,8 @@ video {
                   <div class="pork-rib-wrapper">
                     <div class="pork-rib">Pork rib</div>
                   </div>
-                  <div class="rectangle-parent29">
-                    <div class="frame-child72"></div>
+                  <div class="rectangle-parent29 porkrib">
+                    <div class="frame-child72" id="o"></div>
                     <b class="order18">Order</b>
                   </div>
                 </div>
@@ -906,7 +881,7 @@ video {
                       <div class="geep">Geep</div>
                     </div>
                     <div class="rectangle-parent31">
-                      <div class="frame-child76"></div>
+                      <div class="frame-child76" id="o"></div>
                       <b class="order19">Order</b>
                     </div>
                   </div>
@@ -934,7 +909,7 @@ video {
                     <div class="pork">Pork</div>
                   </div>
                   <div class="rectangle-parent33">
-                    <div class="frame-child80"></div>
+                    <div class="frame-child80" id="o"></div>
                     <b class="order20">Order</b>
                   </div>
                 </div>
@@ -943,7 +918,7 @@ video {
           </div>
         </div>
       </section>
-      <div class="feedback5" id="feedbackText1">Feedback</div>
+      <div class="feedback5" id="feedbackText1"></div>
       <div class="home5" id="homeText2">Home</div>
       <div class="menu7">Menu</div>
       <div class="about-us5" id="aboutUsText1">About Us</div>
@@ -966,7 +941,7 @@ video {
                 </p>
               </h2>
               <div class="explore-button-container">
-                <button class="rectangle-parent35" id="groupButton1">
+                <button class="rectangle-parent35"  id="groupButton1">
                   <div class="frame-child82"></div>
                   <div class="explore">Explore</div>
                 </button>
@@ -1010,6 +985,66 @@ video {
           </div>
         </div>
       </section>
+      <div class="inner-delivery-two">
+        <img
+          class="image-27-icon"
+          loading="lazy"
+          alt=""
+          src="./images/image-27@2x.png"
+        />
+
+        <div class="inner-delivery-three-wrapper">
+          <div class="inner-delivery-three">
+            <div class="we-offer-you-container">
+              <p style="white-space: nowrap;">
+                <span style="
+                    font-size: 29px; 
+                    font-weight: 600; 
+                    font-family: var(--font-inter); 
+                    color: var(--color-black);">
+                    We offer you
+                </span>
+                <span style="
+                    font-size: 35px; /* Ensure font sizes are consistent */
+                    font-weight: 600; 
+                    color: var(--color-chocolate-100);">
+                    DELIVERYSERVICES
+                </span>
+            </p>
+              <p class="blank-line4">
+                <span>
+                  <span class="blank-line5">&nbsp;</span>
+                </span>
+              </p>
+              <p class="enjoy-our-delicious-food-in-th">
+                <span>
+                  <span
+                    >Enjoy our delicious food in the comfort of your own
+                    home. We provide convenient delivery options for our
+                    entire menu. Whether you're craving a quick lunch or a
+                    relaxing dinner, let us bring the flavors to you!</span
+                  >
+                </span>
+              </p>
+            </div>
+            <div class="inner-delivery-three-inner">
+              <button class="rectangle-parent16" id="orderButton">
+                <div class="instance-child8"></div>
+                <b class="how-to-order">How to order</b>
+              </button>
+            </div>
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                  <span class="close-button" id="closeButton">&times;</span>
+                  <video id="orderVideo" controls>
+                      <source src="./video/Zheygo.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
       <footer class="footer2">
         <div class="footer-inner"></div>
         <div class="footer-content">
@@ -1088,7 +1123,7 @@ video {
                         <div class="about-us6" id="aboutUsText2">About us</div>
                       </div>
                     </div>
-                    <div class="feedback6" id="feedbackText2">Feedback</div>
+                    
                     <div class="cart3" id="cartText">Cart</div>
                   </div>
                 </div>
@@ -1132,6 +1167,7 @@ video {
         </div>
       </footer>
     </div>
+    <script src="js/saveOrder.js"></script>
 
     <script>
       var group = document.getElementById("group");
@@ -1147,6 +1183,7 @@ video {
           window.location.href = "/home";
         });
       }
+      
       
       var menuText1 = document.getElementById("menuText1");
       if (menuText1) {
@@ -1168,33 +1205,54 @@ video {
         document.querySelector('.instance-child11').addEventListener('click', function() {
         window.location.href = '/villagerestaurant'; // Replace with the actual path to the next HTML page
       });
-      document.querySelector('.instance-child9').addEventListener('click', function() {
+      document.querySelector('.ema').addEventListener('click', function() {
         window.location.href = '/emadatsi'; // Replace with the actual path to the next HTML page
       });
-      document.querySelector('.potato-button-rect').addEventListener('click', function() {
+      document.querySelector('.kewa').addEventListener('click', function() {
         window.location.href = '/potato'; // Replace with the actual path to the next HTML page
       });
-      document.querySelector('.instance-child10').addEventListener('click', function() {
+      document.querySelector('.apa').addEventListener('click', function() {
         window.location.href = '/asparagus'; // Replace with the actual path to the next HTML page
       });
-      document.querySelector('.spinach-button-rect').addEventListener('click', function() {
+      document.querySelector('.spa').addEventListener('click', function() {
         window.location.href = '/spinach'; // Replace with the actual path to the next HTML page
       });
       
-      document.querySelector('.cauliflower-button-rect').addEventListener('click', function() {
+      document.querySelector('.cali').addEventListener('click', function() {
         window.location.href = '/cali'; // Replace with the actual path to the next HTML page
       });
+      document.querySelector('.kewad').addEventListener('click', function() {
+        window.location.href = '/kewa'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.egg').addEventListener('click', function() {
+        window.location.href = '/egg'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.cheapa').addEventListener('click', function() {
+        window.location.href = '/cheeseasper'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.friche').addEventListener('click', function() {
+        window.location.href = '/friche'; // Replace with the actual path to the next HTML page
+      });
       
-      document.querySelector('.shakam-order-area').addEventListener('click', function() {
+      
+      document.querySelector('.shakam').addEventListener('click', function() {
         window.location.href = '/shakam'; // Replace with the actual path to the next HTML page
       });
-      var feedbackText1 = document.getElementById("feedbackText1");
-      if (feedbackText1) {
-        feedbackText1.addEventListener("click", function (e) {
-          window.location.href("/feedback")
-        });
-      }
-      
+      document.querySelector('.shadat').addEventListener('click', function() {
+        window.location.href = '/shakamdatshi'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.chick').addEventListener('click', function() {
+        window.location.href = '/chicken'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.dryfish').addEventListener('click', function() {
+        window.location.href = '/dryfish'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.chickenpo').addEventListener('click', function() {
+        window.location.href = '/chickenpotato'; // Replace with the actual path to the next HTML page
+      });
+      document.querySelector('.porkrib').addEventListener('click', function() {
+        window.location.href = '/porkrib'; // Replace with the actual path to the next HTML page
+      });
       var homeText2 = document.getElementById("homeText2");
       if (homeText2) {
         homeText2.addEventListener("click", function (e) {
@@ -1209,12 +1267,10 @@ video {
         });
       }
       
-      var groupButton1 = document.getElementById("groupButton1");
-      if (groupButton1) {
-        groupButton1.addEventListener("click", function (e) {
-          window.location.href("/menu")
+     
+      document.getElementById('groupButton1').addEventListener('click', function() {
+            window.location.href = '/menu'; // Replace with your desired URL
         });
-      }
       
       var homeText = document.getElementById("homeText");
       if (homeText) {
@@ -1237,12 +1293,7 @@ video {
         });
       }
       
-      var feedbackText2 = document.getElementById("feedbackText2");
-      if (feedbackText2) {
-        feedbackText2.addEventListener("click", function (e) {
-          window.location.href = "/feedback"
-        });
-      }
+   
       
       var cartText = document.getElementById("cartText");
       if (cartText) {

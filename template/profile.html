@@ -12,12 +12,47 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans Tai Le:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan Script:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans New Tai Lue:wght@500&display=swap" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/dropdown.css">
 </head>
 <body>
     <style>
+        
+    
+.custom-swal-container {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .custom-swal-title {
+            color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .custom-swal-content {
+            color: #000000;
+            font-size: 18px;
+        }
+        div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+          background-color: #DB6103;
+        }
+        .custom-swal-confirm-button {
+            background-color: #DB6103;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 24px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .custom-swal-confirm-button:hover {
+            background-color: #07414f;
+        }
         .home2{
             text-decoration: none;
         }
+        
     </style>
     <div class="profile">
         <section class="frame-parent">
@@ -40,10 +75,15 @@
                         <div class="about-us-container">
                             <h3 class="about-us2" id="aboutUsText">About us</h3>
                         </div>
-                        <h3 class="feedback2" id="feedbackText">Feedback</h3>
+                        <h3 class="feedback2" id="feedbackText"></h3>
                     </nav>
                 </nav>
                 <img class="frame-child15" loading="lazy" id="profile-image" alt="" src="./images/images.png" />
+                <div id="dropdown-menu" class="dropdown-menu">
+                    <a href="/profile">Profile</a>
+                    <a href="/payment">Payment History</a>
+                    <a href="/logout" id="logout">Logout</a>
+                </div>
             </header>
             <div class="frame-div">
                 <div class="new-logo-1-parent">
@@ -177,7 +217,7 @@
                                                 <div class="about-us3" id="aboutUsText1">About us</div>
                                             </div>
                                         </div>
-                                        <div class="feedback3" id="feedbackText1">Feedback</div>
+                                      
                                         <div class="cart2" id="cartText">Cart</div>
                                     </div>
                                 </div>
@@ -185,12 +225,10 @@
                         </div>
                     </div>
                     <div class="frame-parent45">
-                        <div class="c-group">
-                            <div class="c1">c</div>
-                            <div class="frame-child34"></div>
-                        </div>
+                       
                         <div class="zheygo-2024-all-rights-reserv-container">
-                            <div class="zheygo-2024-all1">Zheygo 2024. All Rights Reserved.</div>
+                            <div class="zheygo-2024-all1">
+                                © Zheygo 2024. All Rights Reserved.</div>
                         </div>
                     </div>
                 </div>
@@ -214,36 +252,21 @@
         </footer>
     </div>
 
-    <div id="frameContainer" class="popup-overlay" style="display: none">
-        <div class="rectangle-root">
-            <div class="frame-child99"></div>
-            <img class="frame-child100" alt="" src="./images/group-133600.svg" />
-            <div class="personal-information" id="popuppersonalInformationText">Personal information</div>
-            <div class="payment-details">Payment details</div>
-            <div class="payment-history" id="popuppaymentHistoryText">Payment history</div>
-            <div class="logout">Logout</div>
-            <div class="frame-child101"></div>
-            <div class="frame-child102"></div>
-            <img class="frame-child103" alt="" src="./images/vector-30.svg" />
-        </div>
-    </div>
+   
 
-    <div id="updateSuccessPopup" class="popup-overlay" style="display: none">
-        <div class="group-parent">
-            <div class="image-1-container">
-                <div class="image-11"></div>
-                <div class="update-successful">Update successful!</div>
-            </div>
-        </div>
-    </div>
+ 
     <script src="./js/profile.js"></script>
     <script>
       // Event listener to navigate to the profile page
   
 
       // Event listener to navigate to the about us page
-      document.getElementById("homeText1").addEventListener("click", function() {
+      document.getElementById("homeText").addEventListener("click", function() {
           window.location.href = "/aboutus";
+      });
+           // Event listener to navigate to the about us page
+           document.getElementById("homeText").addEventListener("click", function() {
+          window.location.href = "/home";
       });
 
       // Event listener to navigate to the menu page
@@ -257,14 +280,12 @@
       });
 
       // Placeholder event listener for feedback functionality
-      document.getElementById("feedbackText").addEventListener("click", function() {
-        window.location.href="/feedback"
-      });
+     
 
-      // Placeholder event listener for coupon page functionality
-      document.getElementById("groupContainer").addEventListener("click", function() {
-          // Implement coupon page functionality
-      });
+    //   // Placeholder event listener for coupon page functionality
+    //   document.getElementById("groupContainer").addEventListener("click", function() {
+    //       // Implement coupon page functionality
+    //   });
 
       // Smooth scroll to the rectangle section
       document.getElementById("homeText").addEventListener("click", function() {
@@ -281,19 +302,22 @@
 
       // Event listener to navigate to the cart page
       document.getElementById("aboutUsText1").addEventListener("click", function() {
-          window.location.href = "/cart";
+          window.location.href = "/aboutus";
       });
 
       // Placeholder event listener for feedback functionality
-      document.getElementById("feedbackText1").addEventListener("click", function() {
-        window.location.href = '/feedback'
-      });
-
+     
       // Event listener to navigate to the cart page
       document.getElementById("cartText").addEventListener("click", function() {
           window.location.href = "/cart";
       });
-
+      document.getElementById("homeText1").addEventListener("click", function() {
+          window.location.href = "/home";
+      });
+      document.getElementById("group").addEventListener("click", function() {
+          window.location.href = "/cart";
+      });
+      
       // Handle profile picture upload
       document.getElementById("upload-photo-button").addEventListener("click", function() {
           document.getElementById("profile-picture").click();
@@ -341,15 +365,18 @@ document.getElementById("profile-form").addEventListener("submit", function(even
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
+        showError()
         return response.json();
+        
     })
     .then(data => {
         console.log('Success:', data);
         // Display the success popup
-        document.getElementById('updateSuccessPopup').style.display = 'flex';
+        showAlert()
     })
     .catch(error => {
         console.error('Error:', error);
+        showError()
     });
 });
 
@@ -357,7 +384,42 @@ document.getElementById("reset-button").addEventListener("click", function() {
     document.getElementById("profile-form").reset();
     document.getElementById("profile-picture-preview").style.backgroundImage = `url('./images/default-profile.png')`;
 });
-
+function showAlert() {
+            Swal.fire({
+                title: 'Profile Updated!',
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                customClass: {
+                    container: 'custom-swal-container',
+                    title: 'custom-swal-title',
+                    content: 'custom-swal-content',
+                    confirmButton: 'custom-swal-confirm-button',
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/home';
+                }
+            });
+        }
+        function showError() {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Try Again',
+                icon: 'error',
+                confirmButtonText: 'OK',
+                customClass: {
+                    container: 'custom-swal-container',
+                    title: 'custom-swal-title',
+                    content: 'custom-swal-content',
+                    confirmButton: 'custom-swal-confirm-button',
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/home';
+                }
+            });
+        }
     </script>
 <script>
       document.addEventListener("DOMContentLoaded", function() {

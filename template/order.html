@@ -29,10 +29,97 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="css/dropdown.css">
     <link rel="stylesheet" href="css/profilepic.css">
   </head>
   <style>
+    .expdate-parent input {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+.custom-swal-container {
+            font-family: 'Arial', sans-serif;
+        }
+       .payment-method-wrapper{
+        width: 100%;
+       }
+
+.frame-div{
+  width: 100%;
+}
+        .custom-swal-title {
+            color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .custom-swal-content {
+            color: #000000;
+            font-size: 18px;
+        }
+        div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+          background-color: #DB6103;
+        }
+        .custom-swal-confirm-button {
+            background-color: #DB6103;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 24px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .custom-swal-confirm-button:hover {
+            background-color: #07414f;
+        }
+        .line-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .line-wrapper input {
+            width: 100%;
+            padding: 5px 0; /* Adjust vertical padding as needed */
+            border: none;
+            font-size: larger;
+            outline: none;
+            background-color: transparent; /* Remove background color */
+            border-bottom: 1px solid #000; /* Add bottom border */
+        }
+/* Adjust the size of the date input */
+.instance-inner input[type="date"] {
+    padding: 12px;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Optional: Adjust the appearance on hover and focus */
+.instance-inner input[type="date"]:hover,
+.instance-inner input[type="date"]:focus {
+    border-color: #007bff; /* Change border color on hover and focus */
+}
+
+        /* Optional: Add hover effect */
+        .line-wrapper input:hover {
+            border-bottom-color: #555; /* Change border color on hover */
+        }
+
+        /* Optional: Add focus effect */
+        .line-wrapper input:focus {
+            border-bottom-color: #007bff; /* Change border color on focus */
+        }
+        .expdate{
+          font-size: larger;
+        }
     .purchase{
       pointer-events: none;
     }
@@ -74,7 +161,7 @@
             <div class="about-us-wrapper">
               <a class="about-us" id="aboutUsText">About us</a>
             </div>
-            <a class="feedback" id="feedbackText">Feedback</a>
+            <a class="feedback" id="feedbackText"></a>
           </nav>
         </nav>
         <img
@@ -198,21 +285,14 @@
                       <div class="frame-wrapper6">
                         <div class="master-card-01-1024x654-3-parent">
                           <img
-                            class="master-card-01-1024x654-3-icon"
-                            loading="lazy"
-                            alt=""
-                            src="./images/mastercard011024x654-3@2x.png"
-                          />
-
-                          <img
                             class="master-card-01-1024x654-4-icon"
                             alt=""
-                            src="./images/mastercard011024x654-4@2x.png"
+                            src="./images/money.png"
                           />
                         </div>
                       </div>
                       <div class="atm-card-wrapper">
-                        <div class="atm-card">Atm card</div>
+                        <div class="atm-card">Cash Payment</div>
                       </div>
                     </div>
                   </div>
@@ -229,7 +309,7 @@
                       />
                     </div>
                     <div class="m-bob-wrapper">
-                      <div class="m-bob">M BOB</div>
+                      <div class="m-bob">Wireless</div>
                     </div>
                   </div>
                 </div>
@@ -239,21 +319,23 @@
               <div class="card-number-parent">
                 <div class="card-number">Card Number</div>
                 <div class="line-wrapper">
-                  <div class="frame-child3"></div>
+                  <input type="text">
                 </div>
               </div>
             </div>
             <div class="security-code-parent">
               <div class="security-code">Security code</div>
-              <div class="line-container">
-                <div class="frame-child4"></div>
+              <div class="line-wrapper">
+                <input type="text">
               </div>
             </div>
             <div class="instance-frame">
               <div class="expdate-parent">
                 <div class="expdate">Exp.Date</div>
-                <div class="instance-inner"></div>
-              </div>
+                
+                    <input type="date" />
+              
+            </div>
             </div>
             <div class="group-68default-wrapper">
               <button class="group-68default" id="group68Default">
@@ -291,7 +373,7 @@
       );
       if (popuppersonalInformationText) {
         popuppersonalInformationText.addEventListener("click", function (e) {
-          window.location.href = "./profile.html";
+          window.location.href = "./profile";
         });
       }
       
@@ -300,71 +382,40 @@
       );
       if (popuppaymentHistoryText) {
         popuppaymentHistoryText.addEventListener("click", function (e) {
-          // Please sync "payment history" to the project
+          window.location.href = "./payment";
         });
       }
       
       var group = document.getElementById("group");
       if (group) {
         group.addEventListener("click", function (e) {
-          // Please sync "cart" to the project
+          window.location.href = "./cart";
         });
       }
       
       var homeText = document.getElementById("homeText");
       if (homeText) {
         homeText.addEventListener("click", function (e) {
-          // Please sync "ZhayGo home page" to the project
+          window.location.href = "/home";
         });
       }
       
       var menuText = document.getElementById("menuText");
       if (menuText) {
         menuText.addEventListener("click", function (e) {
-          // Please sync "Our menu" to the project
+          window.location.href = "/menu";
         });
       }
       
       var aboutUsText = document.getElementById("aboutUsText");
       if (aboutUsText) {
         aboutUsText.addEventListener("click", function (e) {
-          // Please sync "ZhayGo About us page" to the project
+          window.location.href = "/aboutus";
         });
       }
       
-      var feedbackText = document.getElementById("feedbackText");
-      if (feedbackText) {
-        feedbackText.addEventListener("click", function (e) {
-          window.location.href = "./feedback.html";
-        });
-      }
       
-      var groupImage = document.getElementById("groupImage");
-      if (groupImage) {
-        groupImage.addEventListener("click", function () {
-          var popup = document.getElementById("frameContainer");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
-        });
-      }
-      
+  
       var groupContainer = document.getElementById("groupContainer");
       if (groupContainer) {
         groupContainer.addEventListener("click", function (e) {
@@ -464,16 +515,52 @@ purchaseButton.addEventListener("click", async function (event) {
         const data = await response.json();
 
         if (response.ok) {
-            alert('Purchase Successful');
+            showAlert()
             console.log(data);
         } else {
-            alert(`Error: ${data.message}`);
+            showError()
         }
     } catch (error) {
         console.error('Error making purchase:', error);
         alert('Internal server error');
     }
 });
+function showAlert() {
+            Swal.fire({
+                title: 'Order Placed!',
+                text: '',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                customClass: {
+                    container: 'custom-swal-container',
+                    title: 'custom-swal-title',
+                    content: 'custom-swal-content',
+                    confirmButton: 'custom-swal-confirm-button',
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/menu';
+                }
+            });
+        }
+        function showError() {
+            Swal.fire({
+                title: 'Error!',
+                text: 'Try Again',
+                icon: 'error',
+                confirmButtonText: 'OK',
+                customClass: {
+                    container: 'custom-swal-container',
+                    title: 'custom-swal-title',
+                    content: 'custom-swal-content',
+                    confirmButton: 'custom-swal-confirm-button',
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/order';
+                }
+            });
+        }
       </script>
       <script src="js/dropdown.js"></script>
       <script src="js/profile.js"></script>

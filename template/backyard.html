@@ -6,11 +6,13 @@
 
     <link rel="stylesheet" href="./css/global1.css" />
     <link rel="stylesheet" href="./css/payment-page-14.css" />
+    <script src="./js/toast.js"></script>
    
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     />
+    <link rel="stylesheet" href="./css/toast.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans Tai Le:wght@400&display=swap"
@@ -28,6 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
     />
     <link rel="stylesheet" href="css/dropdown.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div class="payment-page-14">
@@ -66,7 +69,7 @@
             <div class="about">
               <a class="about-us" id="aboutUsText">About us</a>
             </div>
-            <a class="feedback1" id="feedbackText">Feedback</a>
+            <a class="feedback1" id="feedbackText"></a>
           </nav>
         </nav>
         <img
@@ -140,7 +143,7 @@
             </div>
             <div class="cart-order">
               <div class="cart-order-buttons">
-                <button class="rectangle-group">
+                <button class="rectangle-group" id="group1">
                   <div class="frame-inner"></div>
                   <div class="add-to-cart">Add to Cart</div>
                 </button>
@@ -220,14 +223,7 @@
           window.location.href = "/aboutus";
         });
       }
-      
-      var feedbackText = document.getElementById("feedbackText");
-      if (feedbackText) {
-        feedbackText.addEventListener("click", function (e) {
-          window.location.href = "./feedback";
-        });
-      }
-      
+     
       var groupImage = document.getElementById("groupImage");
       if (groupImage) {
         groupImage.addEventListener("click", function () {
@@ -265,4 +261,5 @@
   <script src="./js/order.js"></script>
   <script src="./js/profile.js"></script>
   <script src="js/dropdown.js"></script>
+  <script src="js/saveOrder.js"></script>
 </html>

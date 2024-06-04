@@ -118,7 +118,7 @@
             <div class="about-us-wrapper">
               <a class="about-us" id="aboutUsText">About us</a>
             </div>
-            <a class="feedback" id="feedbackText">Feedback</a>
+            <a class="feedback" id="feedbackText"></a>
           </nav>
         </nav>
         <img
@@ -140,7 +140,7 @@
           <tr>
             <th>Date</th>
             <th>Image</th>
-            <th>Curry Name</th>
+            <th>Dishes</th>
             <th>Quantity</th>
             <th>Price</th>
           </tr>
@@ -197,12 +197,6 @@
         });
       }
       
-      var feedbackText = document.getElementById("feedbackText");
-      if (feedbackText) {
-        feedbackText.addEventListener("click", function (e) {
-          window.location.href = "./feedback";
-        });
-      }
       
       var groupImage = document.getElementById("groupImage");
       if (groupImage) {

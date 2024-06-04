@@ -1,0 +1,31 @@
+   
+.custom-swal-container {
+    font-family: 'Arial', sans-serif;
+}
+
+.custom-swal-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.custom-swal-content {
+    color: #000000;
+    font-size: 18px;
+}
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+  background-color: #DB6103;
+}
+.custom-swal-confirm-button {
+    background-color: #DB6103;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.custom-swal-confirm-button:hover {
+    background-color: #07414f;
+}

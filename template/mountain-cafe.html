@@ -31,6 +31,19 @@
   cursor: pointer;
       pointer-events: none;
 }
+
+.instance-child20,.instance-child21,.instance-child22,.instance-child23,.instance-child24,.instance-child25,.frame-child160,
+.frame-child164,.frame-child168,.frame-child172,.frame-child176,.frame-child180{
+  cursor: pointer;
+}
+
+    .instance-child20:hover, .instance-child21:hover, .instance-child22:hover, .instance-child23:hover,
+    .instance-child24:hover, .instance-child25:hover, .frame-child160:hover, .frame-child164:hover,
+    .frame-child168:hover, .frame-child172:hover, .frame-child176:hover, .frame-child180:hover {
+        background-color: #07414f;
+    }
+
+
   </style>
   <body>
     <div class="mountain-cafe2">
@@ -67,7 +80,7 @@
           <div class="frame-wrapper60">
             <div class="frame-parent106">
               <div class="feedback-container">
-                <div class="feedback10" id="feedbackText">Feedback</div>
+                <div class="feedback10" id="feedbackText"></div>
               </div>
               <div class="frame-wrapper61">
                 <img
@@ -615,7 +628,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="feedback11" id="feedbackText1">Feedback</div>
+                     
                       <div class="cart5" id="cartText">Cart</div>
                     </div>
                   </div>
@@ -683,12 +696,6 @@
         });
       }
       
-      var feedbackText = document.getElementById("feedbackText");
-      if (feedbackText) {
-        feedbackText.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
-        });
-      }
       
       var menuText2 = document.getElementById("menuText2");
       if (menuText2) {
@@ -704,12 +711,6 @@
         });
       }
       
-      var feedbackText1 = document.getElementById("feedbackText1");
-      if (feedbackText1) {
-        feedbackText1.addEventListener("click", function (e) {
-          window.location.href = '/feedback'
-        });
-      }
       
       var cartText = document.getElementById("cartText");
       if (cartText) {
